@@ -6,17 +6,17 @@ import Projects from "./components/RightPane/Projects";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-32 mx-5 my-10 leading-relaxed">
-      <div>
+    <main className=" mx-auto min-h-screen max-w-screen-xl px-6 py-12 leading-relaxed lg:flex lg:px-12 lg:py-0">
+      <div className="lg:w-1/2 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:flex-col lg:justify-between lg:py-24">
         <Me />
       </div>
-      <div className="flex flex-col gap-28">
+      <div className="flex flex-col gap-28 lg:w-1/2 pt-24 lg:py-24">
         <About />
         <Experiences />
         <Projects />
-        <div className="text-sm">
+        <div className="text-sm lg:max-w-md">
           <p>
-            Design inspired by{" "}
+            Design credits goes to{" "}
             <Link href="https://brittanychiang.com" className="font-semibold">
               Brittany Chiang
             </Link>

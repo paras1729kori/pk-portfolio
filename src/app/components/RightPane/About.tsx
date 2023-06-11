@@ -1,7 +1,7 @@
 const About = () => {
   return (
-    <div className="flex flex-col gap-8">
-      <h1 className="text-sm font-extrabold lg:hidden uppercase">About</h1>
+    <div className="flex flex-col gap-8 lg:max-w-lg">
+      <h1 className="text-sm font-extrabold uppercase">About</h1>
       <div className="flex flex-col gap-3">
         <p className="">
           Back in 2012, I decided to try my hand at creating custom Tumblr

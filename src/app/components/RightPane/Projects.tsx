@@ -29,8 +29,8 @@ const ProjectCard = () => {
           recommended tracks based on your existing playlists and more.
         </p>
         <div className="max-w-md flex flex-wrap">
-          {pills.map(() => {
-            return <Pill />;
+          {pills.map((no) => {
+            return <Pill key={no} />;
           })}
         </div>
       </div>
@@ -42,16 +42,16 @@ const Projects = () => {
   const data = [1, 2];
   return (
     <div className="flex flex-col gap-8">
-      <h1 className="text-sm font-extrabold lg:hidden uppercase">Projects</h1>
+      <h1 className="text-sm font-extrabold uppercase">Projects</h1>
       <div className="flex flex-col gap-8">
         {data.map((no) => {
-          return <ProjectCard />;
+          return <ProjectCard key={no} />;
         })}
       </div>
       <div className="flex items-center gap-2 hover:underline hover:underline-offset-4">
-        <h1>
-          <Link href="#" className="font-bold">
-            View Full Résumé
+        <h1 className="font-bold">
+          <Link href="https://github.com/paras1729kori" target="_blank">
+            View All Projects on GitHub
           </Link>
         </h1>
         <BsFillArrowUpRightSquareFill className="text-md" />

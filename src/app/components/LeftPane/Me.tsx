@@ -8,13 +8,13 @@ import Link from "next/link";
 
 const Me = () => {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 lg:h-screen lg:justify-between">
       {/* Me Details */}
       <div className="max-w-sm flex flex-col gap-2">
-        <h1 className="text-4xl font-extrabold">
+        <h1 className="text-4xl font-extrabold lg:text-5xl">
           <Link href="#">Paras Kori</Link>
         </h1>
-        <h2 className="text-lg font-bold">Freelancer | Techie | Gamer</h2>
+        <h2 className="text-lg font-semibold">Freelancer | Techie | Gamer</h2>
         <p className="text-md">
           I build accessible, fun web applications for industries
         </p>
