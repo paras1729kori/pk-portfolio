@@ -12,18 +12,18 @@ const About = () => {
           My introduction to computer science began back in high school in 2015.
           Our professor taught us the basics of HTML, CSS, and JavaScript, and I
           found joy in creating small webpages from scratch. Since then, my
-          passion for <strong className="text-white">Computer Science</strong>,
-          especially <strong className="text-white">Web Development</strong>,
-          has only grown.
+          passion for <span className="text-white">Computer Science</span>,
+          especially <span className="text-white">Web Development</span>, has
+          only grown.
         </p>
 
         <p>
           Having recently completed my undergraduate degree in{" "}
-          <strong className="text-white">Computer Science Engineering</strong>,
-          I am currently working on implementing the ideas I have been nurturing
-          for years. I am eager to enter the{" "}
-          <strong className="text-white">IT industry</strong> as a professional
-          and contribute to innovative projects.
+          <span className="text-white">Computer Science Engineering</span>, I am
+          currently working on implementing the ideas I have been nurturing for
+          years. I am eager to enter the{" "}
+          <span className="text-white">IT industry</span> as a professional and
+          contribute to innovative projects.
         </p>
 
         <div className="group">
