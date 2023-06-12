@@ -1,19 +1,19 @@
 import { NextResponse } from "next/server";
 
-export async function GET(request: Request) {
-  interface DataType {
-    id: number;
-    start_date: string;
-    end_date: string;
-    company_name: string;
-    cert_link?: string;
-    mode: string;
-    position?: string;
-    description: string;
-    tech_stack?: string[];
-  }
+interface ExperienceDataType {
+  id: number;
+  start_date: string;
+  end_date: string;
+  company_name: string;
+  cert_link?: string;
+  mode: string;
+  position?: string;
+  description: string;
+  tech_stack?: string[];
+}
 
-  const data: DataType[] = [
+export async function GET(request: Request) {
+  const data: ExperienceDataType[] = [
     {
       id: 1,
       start_date: "Oct 2022",
@@ -25,7 +25,7 @@ export async function GET(request: Request) {
       position: "Software Engineer",
       description:
         "Developing dynamic web pages for existing products of the company, mitigating any code bugs using various tools. The role included writing APIs using SpringBoot Core and testing them.",
-      tech_stack: ["Front-End Development", "Nuxt.js", "Spring", "Bootstrap"],
+      tech_stack: ["Nuxt.js", "Spring", "Bootstrap"],
     },
     {
       id: 2,
@@ -37,15 +37,7 @@ export async function GET(request: Request) {
       position: "IT Operations Intern",
       description:
         "Developing and managing software projects of Arviti Global. Designed wireframes and wrote frontend code.",
-      tech_stack: [
-        "Tailwind CSS",
-        "Problem Solving",
-        "Project Management",
-        "Full Stack Develpoment",
-        "React",
-        "Firebase",
-        "Adobe XD",
-      ],
+      tech_stack: ["Tailwind CSS", "React", "Firebase", "Adobe XD"],
     },
     {
       id: 3,
@@ -58,14 +50,7 @@ export async function GET(request: Request) {
       position: "Software Developer",
       description:
         "Created a drive clone for JJ Sanganee & Co. (Chartered Accountant) for sharing of files between employees and admins. Added a built-in chat section for ease of communication.",
-      tech_stack: [
-        "Team Leadership",
-        "Full Stack Development",
-        "Laravel",
-        "MySQL",
-        "Firebase",
-        "Adode XD",
-      ],
+      tech_stack: ["Laravel", "MySQL", "Firebase", "Adode XD"],
     },
   ];
 

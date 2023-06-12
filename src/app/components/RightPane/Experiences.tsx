@@ -12,7 +12,7 @@ interface ExperienceCardProps {
 const ExperienceCard = ({ exp }: ExperienceCardProps) => {
   const pills = exp.tech_stack;
   return (
-    <div className="">
+    <div>
       {/* duration */}
       <div className="text-xs">
         <div className="flex gap-1 items-center uppercase">
@@ -23,14 +23,18 @@ const ExperienceCard = ({ exp }: ExperienceCardProps) => {
       {/* content */}
       <div>
         {exp.cert_link ? (
-          <Link href={exp.cert_link} className="flex gap-2 items-center">
+          <Link
+            href={exp.cert_link}
+            className="text-white flex gap-2 items-center"
+            target="_blank"
+          >
             <h1 className="flex items-center font-bold hover:underline hover:underline-offset-4">
               {exp.company_name} <BsDot /> {exp.mode}
             </h1>
             <BsFillArrowUpRightSquareFill className="text-md" />
           </Link>
         ) : (
-          <h1 className="flex items-center font-bold">
+          <h1 className="text-white flex items-center font-bold">
             {exp.company_name} <BsDot /> {exp.mode}
           </h1>
         )}
@@ -86,9 +90,14 @@ const Experiences = () => {
           <div>loading...</div>
         )}
       </div>
-      <div className="flex items-center gap-2 hover:underline hover:underline-offset-4">
+      <div className="text-white flex items-center gap-2 hover:underline hover:underline-offset-4">
         <h1 className="font-bold">
-          <Link href="#">View Full Résumé</Link>
+          <Link
+            href="https://drive.google.com/file/d/1fwMSHUzNfOsJnAwMZ1GwXl0vos3w-xD-/view?usp=sharing"
+            target="_blank"
+          >
+            View Full Résumé
+          </Link>
         </h1>
         <BsFillArrowUpRightSquareFill className="text-md" />
       </div>

@@ -1,28 +1,50 @@
+"use client";
+
+import Image from "next/image";
+import reynaBlind from "../../../../public/reynaBlind.gif";
+
 const About = () => {
   return (
     <div className="flex flex-col gap-8 lg:max-w-lg">
       <h1 className="text-sm font-extrabold uppercase">About</h1>
       <div className="flex flex-col gap-3">
         <p className="">
-          Back in 2012, I decided to try my hand at creating custom Tumblr
-          themes and tumbled head first into the rabbit hole of coding and web
-          development. Fast-forward to today, and I've had the privilege of
-          building software for an advertising agency, a start-up, a student-led
-          design studio, and a huge corporation.
+          My introduction to computer science began back in high school in 2015.
+          Our professor taught us the basics of HTML, CSS, and JavaScript, and I
+          found joy in creating small webpages from scratch. Since then, my
+          passion for <strong className="text-white">Computer Science</strong>,
+          especially <strong className="text-white">Web Development</strong>,
+          has only grown.
         </p>
 
         <p>
-          My main focus these days is building products and leading projects for
-          our clients at Upstatement. In my free time I've also released an
-          online video course that covers everything you need to know to build a
-          web app with the Spotify API.
+          Having recently completed my undergraduate degree in{" "}
+          <strong className="text-white">Computer Science Engineering</strong>,
+          I am currently working on implementing the ideas I have been nurturing
+          for years. I am eager to enter the{" "}
+          <strong className="text-white">IT industry</strong> as a professional
+          and contribute to innovative projects.
         </p>
 
-        <p>
-          When I'm not at the computer, I'm usually rock climbing, hanging out
-          with my wife and two cats, or running around Hyrule searching for
-          Korok seeds.
-        </p>
+        <div className="group">
+          <p>
+            When AFK, I enjoy exploring new food places, traveling, strumming my
+            ukulele, or indulging in some gaming, particularly{" "}
+            <span className="cursor-pointer font-bold">Valorant</span>.
+          </p>
+
+          <div className="hidden group-hover:block">
+            <div className="lg:flex lg:justify-center">
+              <Image
+                src={reynaBlind}
+                alt="jett.gif"
+                width={100}
+                height={100}
+                className="hidden lg:block"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
