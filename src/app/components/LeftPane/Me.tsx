@@ -15,7 +15,7 @@ const Me = () => {
           <Link href="/">Paras Kori</Link>
         </h1>
         <h2 className="text-white text-lg font-semibold">
-          Developer | Techie | Gamer
+          Developer | Techie | Avid Gamer
         </h2>
         <p className="text-md">
           I build innovative, fun web applications with industry-ready
