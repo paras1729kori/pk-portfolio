@@ -17,7 +17,7 @@ export async function GET(request: Request) {
     {
       id: 1,
       start_date: "Oct 2022",
-      end_date: "Feb 2023",
+      end_date: "Mar 2023",
       company_name: "SS&C Technologies",
       cert_link:
         "https://drive.google.com/file/d/1c10cE5zyfbkY3xEv-oclmT_bZ1PWERD0/view?usp=sharing",
@@ -42,7 +42,7 @@ export async function GET(request: Request) {
     {
       id: 3,
       start_date: "Jun 2020",
-      end_date: "Sep 2020",
+      end_date: "Aug 2020",
       company_name: "JJ Sanganee & Co.",
       cert_link:
         "https://drive.google.com/file/d/1o-Ceohn1JSfI5qliFkcH7ZiKmwkw6PRc/view?usp=sharing",

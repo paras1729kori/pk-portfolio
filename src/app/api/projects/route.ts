@@ -26,7 +26,7 @@ export async function GET(request: Request) {
       image_url: nftLandingPage,
       description:
         "NFT Landing Page. This page serves as a captivating entrance to the exciting world of non-fungible tokens (NFTs) and showcases the unique digital assets that have been created.",
-      tech_stack: ["Vite", "React.js", "TypeScript", "Tailwind CSS"],
+      tech_stack: ["Vite", "React", "TypeScript", "Tailwind CSS"],
     },
     {
       id: 2,
