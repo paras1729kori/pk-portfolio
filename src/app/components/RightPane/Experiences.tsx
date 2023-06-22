@@ -78,6 +78,9 @@ const Experiences = () => {
     fetchExperiences();
   }, []);
 
+  const resumeLink =
+    "https://drive.google.com/file/d/13azqIbUQiuILTRr59r2tdrv_hLj9Ig8L/view?usp=sharing";
+
   return (
     <div className="flex flex-col gap-8">
       <h1 className="text-sm font-extrabold uppercase">Experience</h1>
@@ -92,10 +95,7 @@ const Experiences = () => {
       </div>
       <div className="text-white flex items-center gap-2 hover:underline hover:underline-offset-4">
         <h1 className="font-bold">
-          <Link
-            href="https://drive.google.com/file/d/1fwMSHUzNfOsJnAwMZ1GwXl0vos3w-xD-/view?usp=sharing"
-            target="_blank"
-          >
+          <Link href={resumeLink} target="_blank">
             View Full Résumé
           </Link>
         </h1>
