@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { StaticImageData } from "next/image";
 
+import error404 from "../../../../public/images/error404.png";
+
 import nftLandingPage from "../../../../public/images/nftLandingPage.png";
 import nextPortfolio from "../../../../public/images/nextPortfolio.png";
 import boardDashboard from "../../../../public/images/boardDashboard.png";
@@ -57,6 +59,16 @@ export async function GET(request: Request) {
       image_url: myPortfolio,
       description:
         "My portfolio website for showcasing my skills. A sneak peek into the projects I have built and the experience I have in this evergrowing, amazing world of Computer Science.",
+      tech_stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    },
+    {
+      id: 5,
+      title: "Breaditto - Reddit Clone",
+      deployed_link: "#",
+      github_url: "https://github.com/paras1729kori/breaditto",
+      image_url: error404,
+      description:
+        "A Reddit clone built with Next.js and TypeScript. This is a work in progress project.",
       tech_stack: ["Next.js", "TypeScript", "Tailwind CSS"],
     },
   ];
