@@ -1,15 +1,17 @@
 import { NextResponse } from "next/server";
 import { StaticImageData } from "next/image";
+import { v4 as uuid } from "uuid";
 
-import error404 from "../../../../public/images/error404.png";
+// import error404 from "../../../../public/images/error404.png";
 
 import nftLandingPage from "../../../../public/images/nftLandingPage.png";
 import nextPortfolio from "../../../../public/images/nextPortfolio.png";
 import boardDashboard from "../../../../public/images/boardDashboard.png";
 import myPortfolio from "../../../../public/images/myPortfolio.png";
+import breaditto from "../../../../public/images/breaditto.png";
 
 interface ProjectDataType {
-  id: number;
+  id: string;
   title: string;
   deployed_link: string;
   github_url: string;
@@ -21,7 +23,17 @@ interface ProjectDataType {
 export async function GET(request: Request) {
   const data: ProjectDataType[] = [
     {
-      id: 1,
+      id: uuid(),
+      title: "Breaditto",
+      deployed_link: "https://breaditto.vercel.app/",
+      github_url: "https://github.com/paras1729kori/breaditto",
+      image_url: breaditto,
+      description:
+        "Breaditto is a lightweight Reddit clone that aims to provide a simplified version of the popular social media platform. With a focus on essential features, Breaditto allows users to create communities, submit posts, comment on posts, and upvote/downvote content. It offers a familiar interface for users to engage in discussions, share information, and discover new content.",
+      tech_stack: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma"],
+    },
+    {
+      id: uuid(),
       title: "NFT Landing Page",
       deployed_link: "https://pk-nft-landing-page.vercel.app/",
       github_url: "https://github.com/paras1729kori/nft-landing-page",
@@ -31,8 +43,8 @@ export async function GET(request: Request) {
       tech_stack: ["Vite", "React", "TypeScript", "Tailwind CSS"],
     },
     {
-      id: 2,
-      title: "Next Portfolio",
+      id: uuid(),
+      title: "John Doe | Developer",
       deployed_link: "https://jd-next-portfolio.vercel.app/",
       github_url: "https://github.com/paras1729kori/next-portfolio",
       image_url: nextPortfolio,
@@ -41,7 +53,7 @@ export async function GET(request: Request) {
       tech_stack: ["Next.js", "TypeScript", "Tailwind CSS"],
     },
     {
-      id: 3,
+      id: uuid(),
       title: "Board Dashboard",
       deployed_link: "https://pk-listed-task.vercel.app/",
       github_url:
@@ -52,23 +64,13 @@ export async function GET(request: Request) {
       tech_stack: ["Next.js", "TypeScript", "Tailwind CSS", "React Chart JS 2"],
     },
     {
-      id: 4,
+      id: uuid(),
       title: "My Portfolio",
       deployed_link: "https://paraskori.vercel.app/",
       github_url: "https://github.com/paras1729kori/pk-portfolio",
       image_url: myPortfolio,
       description:
         "My portfolio website for showcasing my skills. A sneak peek into the projects I have built and the experience I have in this evergrowing, amazing world of Computer Science.",
-      tech_stack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    },
-    {
-      id: 5,
-      title: "Breaditto - Reddit Clone",
-      deployed_link: "#",
-      github_url: "https://github.com/paras1729kori/breaditto",
-      image_url: error404,
-      description:
-        "A Reddit clone built with Next.js and TypeScript. This is a work in progress project.",
       tech_stack: ["Next.js", "TypeScript", "Tailwind CSS"],
     },
   ];

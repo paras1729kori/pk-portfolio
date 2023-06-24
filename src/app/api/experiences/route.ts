@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
+import { v4 as uuid } from "uuid";
 
 interface ExperienceDataType {
-  id: number;
+  id: string;
   start_date: string;
   end_date: string;
   company_name: string;
@@ -15,7 +16,7 @@ interface ExperienceDataType {
 export async function GET(request: Request) {
   const data: ExperienceDataType[] = [
     {
-      id: 1,
+      id: uuid(),
       start_date: "Oct 2022",
       end_date: "Mar 2023",
       company_name: "SS&C Technologies",
@@ -28,7 +29,7 @@ export async function GET(request: Request) {
       tech_stack: ["Nuxt.js", "Spring", "Bootstrap"],
     },
     {
-      id: 2,
+      id: uuid(),
       start_date: "Nov 2021",
       end_date: "Jul 2022",
       company_name: "Arviti Global",
@@ -40,7 +41,7 @@ export async function GET(request: Request) {
       tech_stack: ["Tailwind CSS", "React", "Firebase", "Adobe XD"],
     },
     {
-      id: 3,
+      id: uuid(),
       start_date: "Jun 2020",
       end_date: "Aug 2020",
       company_name: "JJ Sanganee & Co.",
