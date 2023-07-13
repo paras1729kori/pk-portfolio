@@ -16,7 +16,7 @@ export default function Home() {
         <Projects />
         <div className="text-sm lg:max-w-md">
           <p>
-            Design credits goes to{" "}
+            Design credits go to{" "}
             <Link
               href="https://brittanychiang.com"
               className="text-white font-semibold"
