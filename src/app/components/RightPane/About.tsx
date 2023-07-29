@@ -21,16 +21,20 @@ const About = () => {
           Having recently completed my undergraduate degree in{" "}
           <span className="text-white">Computer Science Engineering</span>, I am
           currently working on implementing the ideas I have been nurturing for
-          years. I am eager to enter the{" "}
-          <span className="text-white">IT industry</span> as a professional and
-          contribute to innovative projects.
+          years. Nowadays, I am learning{" "}
+          <span className="text-white">Microfrontends with React</span> using{" "}
+          <span className="text-white">Webpack's Module Federation</span> &
+          Testing with popular libraries such as{" "}
+          <span className="text-white">React Testing Library</span>,{" "}
+          <span className="text-white">Cypress</span> and{" "}
+          <span className="text-white">Jest</span>.
         </p>
 
         <div className="group">
           <p>
             When AFK, I enjoy exploring new food places, traveling, strumming my
             ukulele, or indulging in some gaming, particularly{" "}
-            <span className="cursor-pointer font-bold">Valorant</span>.
+            <span className="cursor-pointer md:font-bold">Valorant</span>.
           </p>
 
           <div className="hidden group-hover:block">

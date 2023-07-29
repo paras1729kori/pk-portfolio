@@ -1,10 +1,11 @@
 import {
   AiFillGithub,
-  AiFillInstagram,
+  // AiFillInstagram,
   AiOutlineTwitter,
   AiFillLinkedin,
 } from "react-icons/ai";
 import Link from "next/link";
+import TechStack from "../RightPane/TechStack";
 
 const Me = () => {
   return (
@@ -21,6 +22,7 @@ const Me = () => {
           I build innovative, fun web applications with industry-ready
           standards.
         </p>
+        {/* <TechStack /> */}
       </div>
 
       {/* Socials */}

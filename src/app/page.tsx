@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Me from "./components/LeftPane/Me";
 import About from "./components/RightPane/About";
+import TechStack from "./components/RightPane/TechStack";
 import Experiences from "./components/RightPane/Experiences";
 import Projects from "./components/RightPane/Projects";
 
@@ -10,21 +11,14 @@ export default function Home() {
       <div className="lg:w-1/2 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:flex-col lg:justify-between lg:py-24">
         <Me />
       </div>
-      <div className="flex flex-col gap-28 lg:w-1/2 pt-24 lg:py-24">
+      <div className="flex flex-col gap-24 lg:w-1/2 pt-24 lg:py-24">
         <About />
+        <TechStack />
         <Experiences />
         <Projects />
         <div className="text-sm lg:max-w-md">
           <p>
-            Design credit goes to{" "}
-            <Link
-              href="https://brittanychiang.com"
-              className="text-white font-semibold"
-              target="_blank"
-            >
-              Brittany Chiang
-            </Link>
-            . Written in{" "}
+            Written in{" "}
             <Link
               href="https://code.visualstudio.com/"
               className="text-white font-semibold"
