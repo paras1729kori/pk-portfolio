@@ -1,17 +1,18 @@
-import {
-  AiFillGithub,
-  // AiFillInstagram,
-  AiOutlineTwitter,
-  AiFillLinkedin,
-} from "react-icons/ai";
+import Image from "next/image";
+import { AiFillGithub, AiOutlineTwitter, AiFillLinkedin } from "react-icons/ai";
 import Link from "next/link";
-import TechStack from "../RightPane/TechStack";
+import profileImage from "../../../../public/images/profileImage.png";
 
 const Me = () => {
   return (
     <div className="flex flex-col gap-4 lg:h-screen lg:justify-between">
       {/* Me Details */}
       <div className="max-w-sm flex flex-col gap-2">
+        <Image
+          src={profileImage}
+          alt="profileImage.png"
+          className="w-1/2 rounded-full"
+        />
         <h1 className="text-white text-4xl font-extrabold lg:text-5xl">
           <Link href="/">Paras Kori</Link>
         </h1>
@@ -22,7 +23,6 @@ const Me = () => {
           I build innovative, fun web applications with industry-ready
           standards.
         </p>
-        {/* <TechStack /> */}
       </div>
 
       {/* Socials */}
@@ -34,9 +34,6 @@ const Me = () => {
         >
           <AiFillGithub />
         </Link>
-        {/* <Link href="#" className="hover:text-gray-300" target="_blank">
-          <AiFillInstagram />
-        </Link> */}
         <Link
           href="https://twitter.com/paras1kori"
           className="hover:text-gray-300"
