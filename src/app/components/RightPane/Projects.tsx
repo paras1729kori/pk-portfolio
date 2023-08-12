@@ -19,6 +19,7 @@ const ProjectCard = ({ proj }: ProjectCardProps) => {
         src={proj.image_url}
         alt="image.jpeg"
         className="w-1/2 rounded-xl border border-slate-100"
+        placeholder="blur"
       />
       <div>
         <div className="text-white flex items-center gap-2 hover:underline hover:underline-offset-4">

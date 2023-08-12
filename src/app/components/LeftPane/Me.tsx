@@ -12,6 +12,7 @@ const Me = () => {
           src={profileImage}
           alt="profileImage.png"
           className="w-1/2 rounded-full"
+          placeholder="blur"
         />
         <h1 className="text-white text-4xl font-extrabold lg:text-5xl">
           <Link href="/">Paras Kori</Link>
