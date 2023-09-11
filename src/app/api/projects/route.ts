@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { StaticImageData } from "next/image";
-import { v4 as uuid } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 
 // import error404 from "../../../../public/images/error404.png";
 
@@ -23,7 +23,7 @@ interface ProjectDataType {
 export async function GET(request: Request) {
   const data: ProjectDataType[] = [
     {
-      id: uuid(),
+      id: uuidv4(),
       title: "Breaditto",
       deployed_link: "https://breaditto.vercel.app/",
       github_url: "https://github.com/paras1729kori/breaditto",
@@ -33,7 +33,7 @@ export async function GET(request: Request) {
       tech_stack: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma"],
     },
     {
-      id: uuid(),
+      id: uuidv4(),
       title: "NFT Landing Page",
       deployed_link: "https://pk-nft-landing-page.vercel.app/",
       github_url: "https://github.com/paras1729kori/nft-landing-page",
@@ -43,7 +43,7 @@ export async function GET(request: Request) {
       tech_stack: ["Vite", "React", "TypeScript", "Tailwind CSS"],
     },
     {
-      id: uuid(),
+      id: uuidv4(),
       title: "John Doe | Developer",
       deployed_link: "https://jd-next-portfolio.vercel.app/",
       github_url: "https://github.com/paras1729kori/next-portfolio",
@@ -53,7 +53,7 @@ export async function GET(request: Request) {
       tech_stack: ["Next.js", "TypeScript", "Tailwind CSS"],
     },
     {
-      id: uuid(),
+      id: uuidv4(),
       title: "Board Dashboard",
       deployed_link: "https://pk-listed-task.vercel.app/",
       github_url:
@@ -64,7 +64,7 @@ export async function GET(request: Request) {
       tech_stack: ["Next.js", "TypeScript", "Tailwind CSS", "React Chart JS 2"],
     },
     {
-      id: uuid(),
+      id: uuidv4(),
       title: "My Portfolio",
       deployed_link: "https://paraskori.vercel.app/",
       github_url: "https://github.com/paras1729kori/pk-portfolio",

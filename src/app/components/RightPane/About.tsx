@@ -9,31 +9,33 @@ const About = () => {
       <h1 className="text-sm font-extrabold uppercase">About</h1>
       <div className="flex flex-col gap-3">
         <p className="">
-          My introduction to computer science began back in high school in 2015.
-          Our professor taught us the basics of HTML, CSS, and JavaScript, and I
-          found joy in creating small webpages from scratch. Since then, my
-          passion for <span className="text-white">Computer Science</span>,
-          especially <span className="text-white">Web Development</span>, has
-          only grown.
+          My journey into <span className="text-white">computer science</span>{" "}
+          commenced during my high school years. It was in those formative days
+          that our professor introduced us to the fundamentals of HTML, CSS, and
+          JavaScript. I discovered immense joy in crafting small webpages from
+          the ground up. Since then, my passion for{" "}
+          <span className="text-white">computer science</span>, with a
+          particular emphasis on{" "}
+          <span className="text-white">web development</span>, has continued to
+          flourish.
         </p>
 
         <p>
-          Having recently completed my undergraduate degree in{" "}
-          <span className="text-white">Computer Science Engineering</span>, I am
-          currently working on implementing the ideas I have been nurturing for
-          years. Nowadays, I am learning{" "}
+          At present, I am actively engaged in bringing to life the ideas I've
+          been nurturing for years. I am deeply immersed in learning about{" "}
           <span className="text-white">Microfrontends with React</span> using{" "}
-          <span className="text-white">Webpack's Module Federation</span> &
-          Testing with popular libraries such as{" "}
-          <span className="text-white">React Testing Library</span>,{" "}
-          <span className="text-white">Cypress</span> and{" "}
-          <span className="text-white">Jest</span>.
+          <span className="text-white">Webpack's Module Federation</span> and
+          honing my testing skills using popular libraries like{" "}
+          <span className="text-white">
+            React Testing Library, Cypress, and Jest
+          </span>
+          .
         </p>
 
         <div className="group">
           <p>
-            When AFK, I enjoy exploring new food places, traveling, strumming my
-            ukulele, or indulging in some gaming, particularly{" "}
+            When I'm AFK, I'm usually exploring new food, traveling, strumming
+            my ukulele, or indulging in some gaming, particularly{" "}
             <span className="cursor-pointer md:font-bold">Valorant</span>.
           </p>
 
