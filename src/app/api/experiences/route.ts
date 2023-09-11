@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { v4 as uuid } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 
 interface ExperienceDataType {
   id: string;
@@ -16,7 +16,28 @@ interface ExperienceDataType {
 export async function GET(request: Request) {
   const data: ExperienceDataType[] = [
     {
-      id: uuid(),
+      id: uuidv4(),
+      start_date: "Aug 2023",
+      end_date: "Present",
+      company_name: "Healiom Inc",
+      cert_link: "https://www.healiom.com/",
+      mode: "Full Time",
+      position: "Frontend Engineer",
+      description:
+        "Developing and managing frontend (web + app) projects of Healiom Inc., an AI-based real time specialist care logistics platform that enables access to real-time medical specialists.",
+      tech_stack: [
+        "Next.js",
+        "Tailwind CSS",
+        "React Native",
+        "Redux.js",
+        "Redux Thunk",
+        "Git",
+        "Cascading Style Sheets",
+        "JavaScript",
+      ],
+    },
+    {
+      id: uuidv4(),
       start_date: "Oct 2022",
       end_date: "Feb 2023",
       company_name: "SS&C Technologies",
@@ -29,7 +50,7 @@ export async function GET(request: Request) {
       tech_stack: ["Nuxt.js", "Bootstrap"],
     },
     {
-      id: uuid(),
+      id: uuidv4(),
       start_date: "Nov 2021",
       end_date: "Jul 2022",
       company_name: "Arviti Global",
@@ -41,7 +62,7 @@ export async function GET(request: Request) {
       tech_stack: ["Tailwind CSS", "React", "Firebase", "Adobe XD"],
     },
     {
-      id: uuid(),
+      id: uuidv4(),
       start_date: "Jun 2020",
       end_date: "Aug 2020",
       company_name: "JJ Sanganee & Co.",
