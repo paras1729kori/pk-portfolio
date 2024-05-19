@@ -3,6 +3,7 @@ import Me from "./components/LeftPane/Me";
 import About from "./components/RightPane/About";
 import TechStack from "./components/RightPane/TechStack";
 import Experiences from "./components/RightPane/Experiences";
+import Education from "./components/RightPane/Education";
 import Projects from "./components/RightPane/Projects";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
         <About />
         <TechStack />
         <Experiences />
+        <Education />
         <Projects />
         <div className="text-sm lg:max-w-md">
           <p>
@@ -32,7 +34,7 @@ export default function Home() {
               className="text-white font-semibold"
               target="_blank"
             >
-              Next.js 13
+              Next.js
             </Link>{" "}
             and{" "}
             <Link

@@ -24,16 +24,6 @@ export async function GET(request: Request) {
   const data: ProjectDataType[] = [
     {
       id: uuidv4(),
-      title: "Breaditto",
-      deployed_link: "https://breaditto.vercel.app/",
-      github_url: "https://github.com/paras1729kori/breaditto",
-      image_url: breaditto,
-      description:
-        "Breaditto is a lightweight Reddit clone that aims to provide a simplified version of the popular social media platform. With a focus on essential features, Breaditto allows users to create communities, submit posts, comment on posts, and upvote/downvote content. It offers a familiar interface for users to engage in discussions, share information, and discover new content.",
-      tech_stack: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma"],
-    },
-    {
-      id: uuidv4(),
       title: "NFT Landing Page",
       deployed_link: "https://pk-nft-landing-page.vercel.app/",
       github_url: "https://github.com/paras1729kori/nft-landing-page",
@@ -72,6 +62,16 @@ export async function GET(request: Request) {
       description:
         "My portfolio website for showcasing my skills. A sneak peek into the projects I have built and the experience I have in this evergrowing, amazing world of Computer Science.",
       tech_stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    },
+    {
+      id: uuidv4(),
+      title: "Breaditto",
+      deployed_link: "https://breaditto.vercel.app/",
+      github_url: "https://github.com/paras1729kori/breaditto",
+      image_url: breaditto,
+      description:
+        "Breaditto is a lightweight Reddit clone that aims to provide a simplified version of the popular social media platform. With a focus on essential features, Breaditto allows users to create communities, submit posts, comment on posts, and upvote/downvote content. It offers a familiar interface for users to engage in discussions, share information, and discover new content.",
+      tech_stack: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma"],
     },
   ];
 

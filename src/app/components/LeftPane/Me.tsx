@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { AiFillGithub, AiOutlineTwitter, AiFillLinkedin } from "react-icons/ai";
 import Link from "next/link";
-import profileImage from "../../../../public/images/profileImage.png";
+import profileImage from "../../../../public/images/profileImage.jpeg";
 
 const Me = () => {
   return (
