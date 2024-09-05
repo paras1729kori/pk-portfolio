@@ -15,27 +15,37 @@ const ProjectCard = ({ proj }: ProjectCardProps) => {
   const pills = proj.tech_stack;
   return (
     <div className="flex flex-col-reverse gap-4">
-      <Image
-        src={proj.image_url}
-        alt="image.jpeg"
-        className="w-1/2 rounded-xl border border-slate-100"
-        placeholder="blur"
-      />
+      {proj?.image_url && (
+        <Image
+          src={proj.image_url}
+          alt="image.jpeg"
+          className="w-1/2 rounded-xl border border-slate-100"
+          placeholder="blur"
+        />
+      )}
       <div>
         <div className="text-white flex items-center gap-2 hover:underline hover:underline-offset-4">
-          <h1 className="font-bold">
-            <Link href={proj.deployed_link} target="_blank">
-              {proj.title}
+          {proj?.deployed_link ? (
+            <h1 className="font-bold">
+              <Link href={proj.deployed_link} target="_blank">
+                {proj.title}
+              </Link>
+            </h1>
+          ) : (
+            <h1 className="font-bold">{proj.title}</h1>
+          )}
+          {proj?.deployed_link && (
+            <BsFillArrowUpRightSquareFill className="text-md" />
+          )}
+        </div>
+        {proj?.github_url && (
+          <h1 className="flex items-center gap-1 text-sm font-semibold">
+            <BsLink45Deg />
+            <Link href={proj.github_url} target="_blank">
+              GitHub
             </Link>
           </h1>
-          <BsFillArrowUpRightSquareFill className="text-md" />
-        </div>
-        <h1 className="flex items-center gap-1 text-sm font-semibold">
-          <BsLink45Deg />
-          <Link href={proj.github_url} target="_blank">
-            GitHub
-          </Link>
-        </h1>
+        )}
         <p className="text-sm mt-1">{proj.description}</p>
         <div className="max-w-md flex flex-wrap">
           {pills
