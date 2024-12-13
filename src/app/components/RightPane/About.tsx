@@ -1,9 +1,14 @@
 "use client";
+import { useState } from "react";
 
 import Image from "next/image";
-import reynaBlind from "../../../../public/reynaBlind.gif";
+import neo_flying from "../../../../public/neo_flying.gif";
+import ramen from "../../../../public/ramen.gif";
 
 const About = () => {
+  const [movieImg, setMovieImg] = useState<boolean>(false);
+  const [foodImg, setFoodImg] = useState<boolean>(false);
+
   return (
     <div className="flex flex-col gap-8 lg:max-w-lg">
       <h1 className="text-sm font-extrabold uppercase">About</h1>
@@ -21,34 +26,53 @@ const About = () => {
         </p>
 
         <p>
-          At present, I am actively engaged in bringing to life the ideas I've
-          been nurturing for years. I am deeply immersed in learning about{" "}
-          <span className="text-white">Microfrontends with React</span> using{" "}
-          <span className="text-white">Webpack's Module Federation</span> and
-          honing my testing skills using popular libraries like{" "}
-          <span className="text-white">
-            React Testing Library, Cypress, and Jest
-          </span>
-          .
+          I'm finally bringing to life the ideas I've been nurturing for years.
+          My current focus is on mastering the intricacies of{" "}
+          <span className="text-white">DevOps</span>,{" "}
+          <span className="text-white">Cloud Computing</span>, and{" "}
+          <span className="text-white">System Design</span>. I'm exploring ways
+          to streamline workflows, build scalable cloud solutions, and design
+          systems that are both robust and efficient. It's an exciting journey,
+          pushing me to grow and inspiring me to create meaningful, impactful
+          solutions.
         </p>
 
-        <div className="group">
+        <div className="">
           <p>
-            When I'm AFK, I'm usually exploring new food, traveling, strumming
-            my ukulele, or indulging in some gaming, particularly{" "}
-            <span className="cursor-pointer md:font-bold">Valorant</span>.
+            When AFK, I'm usually{" "}
+            <span
+              className="cursor-pointer font-bold animate-pulse"
+              onMouseEnter={() => setMovieImg(true)}
+              onMouseLeave={() => setMovieImg(false)}
+            >
+              binge watching
+            </span>
+            , travelling, indulging in some gaming or exploring new{" "}
+            <span
+              className="cursor-pointer font-bold animate-pulse"
+              onMouseEnter={() => setFoodImg(true)}
+              onMouseLeave={() => setFoodImg(false)}
+            >
+              food
+            </span>
+            .
           </p>
 
-          <div className="hidden group-hover:block">
-            <div className="lg:flex lg:justify-center">
-              <Image
-                src={reynaBlind}
-                alt="jett.gif"
-                width={100}
-                height={100}
-                className="hidden lg:block"
-              />
-            </div>
+          <div
+            className={`mt-10 ${movieImg ? "flex justify-center" : "hidden"}`}
+          >
+            <Image
+              loading="lazy"
+              src={neo_flying}
+              alt="neo.gif"
+              width={400}
+              className="rounded-lg"
+            />
+          </div>
+          <div
+            className={`mt-10 ${foodImg ? "flex justify-center" : "hidden"}`}
+          >
+            <Image loading="lazy" src={ramen} alt="food.gif" width={200} />
           </div>
         </div>
       </div>

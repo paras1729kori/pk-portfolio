@@ -24,23 +24,22 @@ export async function GET(request: Request) {
       mode: "Full Time",
       position: "Software Engineer",
       description:
-        "As a software developer at Healiom Inc., I manage web projects using React.js, Redux.js, and React Hooks while applying SOLID principles for clean, maintainable code. I integrate third-party tools like Zoom Video SDK, GetStream.io for chats, and create charts with Google Chart Library and D3. I use Tailwind CSS and shadcn/ui for accessible interfaces, and ensure scalable, robust solutions with Git, GitHub Actions, and Docker.",
+        "Leading a dedicated team focused on developing and maintaining web-based healthcare applications, including an advanced Electronic Health Records (EHR) system. The goal is to empower healthcare providers to deliver superior care and ensure patients receive timely, efficient treatment.",
       tech_stack: [
-        "React.js",
+        "React",
         "Redux.js",
         "Tailwind CSS",
         "JavaScript (ES6+)",
         "Git",
-        "Git Actions",
-        "Git Workflows",
+        "Git Workflows + Actions",
         "WebSocket",
         "Zod Validation",
-        "Axios",
         "Payments",
         "Postman",
         "GetStream.io",
         "Docker",
         "Zoom Video SDK",
+        "Jira",
       ],
     },
     {
@@ -53,8 +52,8 @@ export async function GET(request: Request) {
       mode: "Internship",
       position: "Associate Software Engineer (P1)",
       description:
-        "As a front-end developer at SS&C Technologies, I built scalable web applications using Vue.js and dotCMS while applying SOLID principles. I managed projects with Jira, ensuring efficient workflows and timely delivery. My focus was on delivering high-performance, industry-standard solutions.",
-      tech_stack: ["Vue.js", "Bootstrap", "dotCMS", "Web Development"],
+        "As a front-end developer at SS&C Technologies, I built scalable web applications using Vue and dotCMS while applying SOLID principles. I managed projects with Jira, ensuring efficient workflows and timely delivery. My focus was on delivering high-performance, industry-standard solutions.",
+      tech_stack: ["Vue", "Bootstrap", "dotCMS", "Web Development"],
     },
     {
       id: uuidv4(),

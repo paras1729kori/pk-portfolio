@@ -5,6 +5,7 @@ import TechStack from "./components/RightPane/TechStack";
 import Experiences from "./components/RightPane/Experiences";
 import Education from "./components/RightPane/Education";
 import Projects from "./components/RightPane/Projects";
+// import ContactUs from "./components/RightPane/ContactUs";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Experiences />
         <Education />
         <Projects />
+        {/* <ContactUs /> */}
         <div className="text-sm lg:max-w-md">
           <p>
             Written in{" "}
