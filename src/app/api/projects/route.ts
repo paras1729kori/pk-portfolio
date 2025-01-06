@@ -2,10 +2,7 @@ import { NextResponse } from "next/server";
 import { StaticImageData } from "next/image";
 import { v4 as uuidv4 } from "uuid";
 
-// import error404 from "../../../../public/images/error404.png";
-
 import nftLandingPage from "../../../../public/images/nftLandingPage.png";
-import nextPortfolio from "../../../../public/images/nextPortfolio.png";
 import boardDashboard from "../../../../public/images/boardDashboard.png";
 import myPortfolio from "../../../../public/images/myPortfolio.png";
 import breaditto from "../../../../public/images/breaditto.png";

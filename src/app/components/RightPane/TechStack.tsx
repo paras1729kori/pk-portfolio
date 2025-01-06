@@ -1,3 +1,4 @@
+/** library imports */
 import {
   SiJavascript,
   SiTypescript,
@@ -6,17 +7,12 @@ import {
   SiSass,
   SiPython,
   SiReact,
-  SiNextdotjs,
   SiRedux,
   SiWebpack,
   SiTailwindcss,
   SiBootstrap,
-  SiMysql,
   SiMongodb,
-  SiPrisma,
   SiGithub,
-  SiVercel,
-  SiFigma,
   SiAxios,
   SiDocker,
   SiRadixui,
@@ -35,7 +31,7 @@ const TechStack = () => {
     <>
       <div className="flex flex-col gap-8 lg:max-w-lg">
         <h1 className="text-sm font-extrabold uppercase">Tech Stack</h1>
-        <Marquee autoFill={true} pauseOnHover={true} speed={100}>
+        <Marquee autoFill={true} pauseOnHover={true} speed={80}>
           <div className="flex items-center gap-2">
             <SiJavascript className="text-2xl" />
             <SiTypescript className="text-2xl" />

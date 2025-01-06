@@ -1,12 +1,16 @@
 "use client";
+/** library import */
 import { useState } from "react";
 
+/** custom import */
 import Image from "next/image";
-import neo_flying from "../../../../public/neo_flying.gif";
-import ramen from "../../../../public/ramen.gif";
+import neo_flying from "../../../../public/gifs/neo_flying.gif";
+import travelling from "../../../../public/gifs/travelling.gif";
+import ramen from "../../../../public/gifs/ramen.gif";
 
 const About = () => {
   const [movieImg, setMovieImg] = useState<boolean>(false);
+  const [travellingImg, setTravellingImg] = useState<boolean>(false);
   const [foodImg, setFoodImg] = useState<boolean>(false);
 
   return (
@@ -32,9 +36,12 @@ const About = () => {
           <span className="text-white">Cloud Computing</span>, and{" "}
           <span className="text-white">System Design</span>. I'm exploring ways
           to streamline workflows, build scalable cloud solutions, and design
-          systems that are both robust and efficient. It's an exciting journey,
-          pushing me to grow and inspiring me to create meaningful, impactful
-          solutions.
+          systems that are both robust and efficient. Additionally, I've started
+          learning <span className="text-white">UI/UX principles</span> and
+          skills to ensure the solutions I create are not only impactful but
+          also <span className="text-white">user-friendly</span>. It's an
+          exciting journey, pushing me to grow and inspiring me to create
+          meaningful, impactful solutions.
         </p>
 
         <div className="">
@@ -47,7 +54,15 @@ const About = () => {
             >
               binge watching
             </span>
-            , travelling, indulging in some gaming or exploring new{" "}
+            ,{" "}
+            <span
+              className="cursor-pointer font-bold animate-pulse"
+              onMouseEnter={() => setTravellingImg(true)}
+              onMouseLeave={() => setTravellingImg(false)}
+            >
+              travelling
+            </span>
+            , indulging in some gaming or exploring new{" "}
             <span
               className="cursor-pointer font-bold animate-pulse"
               onMouseEnter={() => setFoodImg(true)}
@@ -65,6 +80,19 @@ const About = () => {
               loading="lazy"
               src={neo_flying}
               alt="neo.gif"
+              width={400}
+              className="rounded-lg"
+            />
+          </div>
+          <div
+            className={`mt-10 ${
+              travellingImg ? "flex justify-center" : "hidden"
+            }`}
+          >
+            <Image
+              loading="lazy"
+              src={travelling}
+              alt="travelling.gif"
               width={400}
               className="rounded-lg"
             />

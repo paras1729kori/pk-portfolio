@@ -1,9 +1,11 @@
 "use client";
-
-import Link from "next/link";
-import Pill from "./Pill";
-import { BsFillArrowUpRightSquareFill, BsDashLg, BsDot } from "react-icons/bs";
+/** library import */
 import { useState, useEffect } from "react";
+import { BsFillArrowUpRightSquareFill, BsDashLg, BsDot } from "react-icons/bs";
+import Link from "next/link";
+
+/** custom import */
+import Pill from "./Pill";
 
 interface ExperienceCardProps {
   exp: ExperienceData;
@@ -22,22 +24,26 @@ const ExperienceCard = ({ exp }: ExperienceCardProps) => {
 
       {/* content */}
       <div>
-        {exp.cert_link ? (
-          <Link
-            href={exp.cert_link}
-            className="text-white flex gap-2 items-center"
-            target="_blank"
-          >
-            <h1 className="flex items-center font-bold hover:underline hover:underline-offset-4">
+        <div className="text-white flex items-center gap-2">
+          {exp?.cert_link ? (
+            <h1 className="font-bold hover:underline hover:underline-offset-4">
+              <Link
+                href={exp.cert_link}
+                target="_blank"
+                className="flex items-center"
+              >
+                {exp.company_name} <BsDot /> {exp.mode}
+              </Link>
+            </h1>
+          ) : (
+            <h1 className="text-white flex items-center font-bold">
               {exp.company_name} <BsDot /> {exp.mode}
             </h1>
+          )}
+          {exp?.cert_link && (
             <BsFillArrowUpRightSquareFill className="text-md" />
-          </Link>
-        ) : (
-          <h1 className="text-white flex items-center font-bold">
-            {exp.company_name} <BsDot /> {exp.mode}
-          </h1>
-        )}
+          )}
+        </div>
         <h2 className="font-bold text-gray-500">{exp.position}</h2>
         <p className="text-sm mt-1">{exp.description}</p>
       </div>

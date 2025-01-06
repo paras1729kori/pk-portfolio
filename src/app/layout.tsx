@@ -1,10 +1,13 @@
-import "./globals.css";
+/** library imports */
 import { Inter } from "next/font/google";
+
+/** custom imports */
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Paras Kori",
+  title: "Paras Kori - Creative Developer & Designer",
   description: "My portfolio as a full stack developer 👨🏻‍💻",
 };
 

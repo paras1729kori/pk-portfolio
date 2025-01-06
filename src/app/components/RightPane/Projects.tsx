@@ -1,11 +1,12 @@
 "use client";
-
+/** library import */
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 import { BsFillArrowUpRightSquareFill, BsLink45Deg } from "react-icons/bs";
-import Pill from "./Pill";
 
-import { useState, useEffect } from "react";
+/** custom imports */
+import Pill from "./Pill";
 
 interface ProjectCardProps {
   proj: ProjectDataType;
@@ -13,6 +14,7 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ proj }: ProjectCardProps) => {
   const pills = proj.tech_stack;
+
   return (
     <div className="flex flex-col-reverse gap-4">
       {proj?.image_url && (
@@ -24,9 +26,9 @@ const ProjectCard = ({ proj }: ProjectCardProps) => {
         />
       )}
       <div>
-        <div className="text-white flex items-center gap-2 hover:underline hover:underline-offset-4">
+        <div className="text-white flex items-center gap-2">
           {proj?.deployed_link ? (
-            <h1 className="font-bold">
+            <h1 className="font-bold hover:underline hover:underline-offset-4">
               <Link href={proj.deployed_link} target="_blank">
                 {proj.title}
               </Link>
