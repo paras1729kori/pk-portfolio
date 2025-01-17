@@ -45,10 +45,10 @@ const ExperienceCard = ({ exp }: ExperienceCardProps) => {
           )}
         </div>
         <div className="flex flex-col items-start gap-2">
-          {allRoles?.map((item) => {
+          {allRoles?.map((item, idx) => {
             const pills = item?.tech_stack || [];
             return (
-              <div>
+              <div key={idx}>
                 <h2 className="font-bold text-gray-500">{item?.position}</h2>
                 {allRoles?.length > 1 && (
                   <div className="text-xs flex gap-1 items-center uppercase">
