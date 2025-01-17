@@ -2,11 +2,13 @@
 /** library import */
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { BsFillArrowUpRightSquareFill, BsLink45Deg } from "react-icons/bs";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 /** custom imports */
 import Pill from "./Pill";
+import { ProjectDataType } from "@/utils/allInterfaces";
 
 interface ProjectCardProps {
   proj: ProjectDataType;
@@ -61,16 +63,6 @@ const ProjectCard = ({ proj }: ProjectCardProps) => {
   );
 };
 
-interface ProjectDataType {
-  id: number;
-  title: string;
-  deployed_link: string;
-  github_url: string;
-  image_url: StaticImageData;
-  description: string;
-  tech_stack?: string[];
-}
-
 const Projects = () => {
   const [projects, setProjects] = useState<ProjectDataType[] | null>(null);
   useEffect(() => {
@@ -92,7 +84,10 @@ const Projects = () => {
             return <ProjectCard key={proj.id} proj={proj} />;
           })
         ) : (
-          <div>loading...</div>
+          <div className="flex items-center gap-2">
+            <span>Loading</span>
+            <AiOutlineLoading3Quarters className="animate-spin" />
+          </div>
         )}
       </div>
       <div className="text-white flex items-center gap-2 hover:underline hover:underline-offset-4">

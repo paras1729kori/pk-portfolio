@@ -1,21 +1,13 @@
+/** library imports */
 import { NextResponse } from "next/server";
-import { StaticImageData } from "next/image";
 import { v4 as uuidv4 } from "uuid";
 
+/** custom imports */
+import { ProjectDataType } from "@/utils/allInterfaces";
 import nftLandingPage from "../../../../public/images/nftLandingPage.png";
 import boardDashboard from "../../../../public/images/boardDashboard.png";
 import myPortfolio from "../../../../public/images/myPortfolio.png";
 import breaditto from "../../../../public/images/breaditto.png";
-
-interface ProjectDataType {
-  id: string;
-  title: string;
-  deployed_link?: string;
-  github_url?: string;
-  image_url?: StaticImageData;
-  description: string;
-  tech_stack?: string[];
-}
 
 export async function GET(request: Request) {
   const data: ProjectDataType[] = [

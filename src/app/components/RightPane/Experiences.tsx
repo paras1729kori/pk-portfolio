@@ -2,24 +2,24 @@
 /** library import */
 import { useState, useEffect } from "react";
 import { BsFillArrowUpRightSquareFill, BsDashLg, BsDot } from "react-icons/bs";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import Link from "next/link";
 
 /** custom import */
 import Pill from "./Pill";
+import { ExperienceDataType } from "@/utils/allInterfaces";
 
 interface ExperienceCardProps {
-  exp: ExperienceData;
+  exp: ExperienceDataType;
 }
 
 const ExperienceCard = ({ exp }: ExperienceCardProps) => {
-  const pills = exp.tech_stack;
+  const allRoles = exp?.roles || [];
   return (
     <div>
       {/* duration */}
-      <div className="text-xs">
-        <div className="flex gap-1 items-center uppercase">
-          {exp.start_date} <BsDashLg /> {exp.end_date}
-        </div>
+      <div className="text-xs flex gap-1 items-center uppercase">
+        {exp.start_date} <BsDashLg /> {exp.end_date}
       </div>
 
       {/* content */}
@@ -44,36 +44,38 @@ const ExperienceCard = ({ exp }: ExperienceCardProps) => {
             <BsFillArrowUpRightSquareFill className="text-md" />
           )}
         </div>
-        <h2 className="font-bold text-gray-500">{exp.position}</h2>
-        <p className="text-sm mt-1">{exp.description}</p>
-      </div>
-
-      {/* Language pills */}
-      <div className="max-w-md flex flex-wrap">
-        {pills
-          ? pills.map((pill) => {
-              return <Pill key={exp.id} pill={pill} />;
-            })
-          : ""}
+        <div className="flex flex-col items-start gap-2">
+          {allRoles?.map((item) => {
+            const pills = item?.tech_stack || [];
+            return (
+              <div>
+                <h2 className="font-bold text-gray-500">{item?.position}</h2>
+                {allRoles?.length > 1 && (
+                  <div className="text-xs flex gap-1 items-center uppercase">
+                    {item?.start_date} <BsDashLg /> {item?.end_date}
+                  </div>
+                )}
+                <p className="text-sm mt-1">{item?.description}</p>
+                <div className="max-w-md flex flex-wrap">
+                  {pills?.length > 0
+                    ? pills?.map((pill) => {
+                        return <Pill key={exp.id} pill={pill} />;
+                      })
+                    : ""}
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
 };
 
-interface ExperienceData {
-  id: number;
-  start_date: string;
-  end_date: string;
-  company_name: string;
-  cert_link?: string;
-  mode: string;
-  position?: string;
-  description: string;
-  tech_stack?: string[];
-}
-
 const Experiences = () => {
-  const [experiences, setExperiences] = useState<ExperienceData[] | null>(null);
+  const [experiences, setExperiences] = useState<ExperienceDataType[] | null>(
+    null
+  );
   useEffect(() => {
     const fetchExperiences = async () => {
       const res = await fetch("/api/experiences");
@@ -96,7 +98,10 @@ const Experiences = () => {
             return <ExperienceCard key={exp.id} exp={exp} />;
           })
         ) : (
-          <div>loading...</div>
+          <div className="flex items-center gap-2">
+            <span>Loading</span>
+            <AiOutlineLoading3Quarters className="animate-spin" />
+          </div>
         )}
       </div>
       <div className="text-white flex items-center gap-2 hover:underline hover:underline-offset-4">
