@@ -16,17 +16,17 @@ export async function GET(request: Request) {
       mode: "Full Time",
       roles: [
         {
-          position: "Lead Software Engineer (Web)",
+          position: "Sr. Software Engineer (Web)",
           description:
             "Leading a dedicated team focused on developing and maintaining web-based healthcare applications, including an advanced Electronic Health Records (EHR) system. The goal is to empower healthcare providers to deliver superior care and ensure patients receive timely, efficient treatment.",
-          start_date: "Jan 2025",
+          start_date: "Feb 2025",
           end_date: "Present",
           tech_stack: [
             "Team Leadership",
             "Management",
             "Front-end Development",
             "User Experience (UX)",
-            "JavaScript",
+            "Unit Testing (Vitest & TL)",
           ],
         },
         {
@@ -34,7 +34,7 @@ export async function GET(request: Request) {
           description:
             "Developing and maintaining web-based healthcare applications, including an advanced Electronic Health Records (EHR) system. The goal is to empower healthcare providers to deliver superior care and ensure patients receive timely, efficient treatment.",
           start_date: "Aug 2023",
-          end_date: "Dec 2024",
+          end_date: "Jan 2025",
           tech_stack: [
             "React",
             "Redux.js",
