@@ -16,7 +16,7 @@ export async function GET(request: Request) {
       mode: "Full Time",
       roles: [
         {
-          position: "Sr. Software Engineer (Web)",
+          position: "Senior Frontend Engineer",
           description:
             "Leading a dedicated team focused on developing and maintaining web-based healthcare applications, including an advanced Electronic Health Records (EHR) system. The goal is to empower healthcare providers to deliver superior care and ensure patients receive timely, efficient treatment.",
           start_date: "Feb 2025",
@@ -30,7 +30,7 @@ export async function GET(request: Request) {
           ],
         },
         {
-          position: "Software Engineer",
+          position: "Frontend Engineer",
           description:
             "Developing and maintaining web-based healthcare applications, including an advanced Electronic Health Records (EHR) system. The goal is to empower healthcare providers to deliver superior care and ensure patients receive timely, efficient treatment.",
           start_date: "Aug 2023",
