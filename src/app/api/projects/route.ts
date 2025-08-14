@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 /** custom imports */
 import { ProjectDataType } from "@/utils/allInterfaces";
 import nftLandingPage from "../../../../public/images/nftLandingPage.png";
+import quickTaskMaster from "../../../../public/images/quickTaskMaster.png";
 import boardDashboard from "../../../../public/images/boardDashboard.png";
 import myPortfolio from "../../../../public/images/myPortfolio.png";
 import breaditto from "../../../../public/images/breaditto.png";
@@ -13,18 +14,50 @@ export async function GET(request: Request) {
   const data: ProjectDataType[] = [
     {
       id: uuidv4(),
+      title: "Quick-Task-Master",
+      deployed_link: "https://quick-task-master.vercel.app/",
+      github_url: "https://github.com/paras1729kori/quick-task",
+      image_url: quickTaskMaster,
+      description:
+        "Quick Task Master is a full-stack web application designed to help users efficiently manage their daily tasks. With an intuitive interface and robust backend, it allows users to create, update, and delete tasks seamlessly.",
+      tech_stack: [
+        "Vite",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "NestJS",
+        "Node.js",
+        "Express.js",
+        "Prisma ORM",
+        "PostgreSQL",
+        "Docker",
+      ],
+    },
+    {
+      id: uuidv4(),
       title: "Together",
       deployed_link: "https://ieeexplore.ieee.org/document/10039601/",
       description:
         "An enhanced Ethereum-based crowdfunding system aimed at securely raising funds for innovative projects. The focus was on developing a smart contract that guarantees investor contributions while addressing concerns of fraud in crowdfunding.",
-      tech_stack: ["Webpack", "React", "TypeScript", "Tailwind CSS"],
+      tech_stack: [
+        "Webpack",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "College Project",
+      ],
     },
     {
       id: uuidv4(),
       title: "DigiQ",
       description:
         "A Digital Queue System for solving the problems one faces in queues. Consisting of an android app and admin dashboard for managing the system. It involved building an admin panel using Laravel and adding Firebase authentication",
-      tech_stack: ["Laravel", "Tailwind CSS", "Android Studio"],
+      tech_stack: [
+        "Laravel",
+        "Tailwind CSS",
+        "Android Studio",
+        "College Project",
+      ],
     },
     {
       id: uuidv4(),
