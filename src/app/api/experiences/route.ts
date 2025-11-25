@@ -9,8 +9,34 @@ export async function GET(request: Request) {
   const data: ExperienceDataType[] = [
     {
       id: uuidv4(),
-      start_date: "Aug 2023",
+      company_name: "Punch",
+      start_date: "Oct 2025",
       end_date: "Present",
+      cert_link: "https://www.punch.trade/",
+      mode: "Full Time",
+      roles: [
+        {
+          position: "Software Engineer",
+          description: "Building Single Screen Trading at Punch",
+          start_date: "Oct 2025",
+          end_date: "Present",
+          tech_stack: [
+            "React",
+            "Zustand",
+            "Tailwind CSS",
+            "Tanstack Query",
+            "JavaScript (ES6+)",
+            "TypeScript",
+            "Git",
+            "WebSocket",
+          ],
+        },
+      ],
+    },
+    {
+      id: uuidv4(),
+      start_date: "Aug 2023",
+      end_date: "Oct 2025",
       company_name: "Healiom Inc",
       cert_link: "https://www.healiom.com/",
       mode: "Full Time",
@@ -20,7 +46,7 @@ export async function GET(request: Request) {
           description:
             "Leading a dedicated team focused on developing and maintaining web-based healthcare applications, including an advanced Electronic Health Records (EHR) system. The goal is to empower healthcare providers to deliver superior care and ensure patients receive timely, efficient treatment.",
           start_date: "Feb 2025",
-          end_date: "Present",
+          end_date: "Oct 2025",
           tech_stack: [
             "Team Leadership",
             "Management",
