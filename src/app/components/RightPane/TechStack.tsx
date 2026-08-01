@@ -3,7 +3,7 @@ import {
   SiJavascript,
   SiTypescript,
   SiHtml5,
-  SiCss3,
+  SiCss,
   SiSass,
   SiPython,
   SiReact,
@@ -19,14 +19,17 @@ import {
   SiVite,
   SiExpress,
   SiNodedotjs,
-  SiAwsamplify,
   SiPostman,
   SiGithubactions,
   SiVitest,
   SiTestinglibrary,
+  SiJest,
+  SiClaudecode,
+  SiOpenaigym,
 } from "react-icons/si";
 import { TbSql } from "react-icons/tb";
 import Marquee from "react-fast-marquee";
+import { AiOutlineOpenAI } from "react-icons/ai";
 
 const TechStack = () => {
   return (
@@ -35,6 +38,10 @@ const TechStack = () => {
         <h1 className="text-sm font-extrabold uppercase">Tech Stack</h1>
         <Marquee autoFill={true} pauseOnHover={true} speed={50}>
           <div className="flex items-center gap-2">
+            <span className="mr-2 text-xs font-semibold">AI Native</span>
+            <SiClaudecode className="text-2xl" />
+            <AiOutlineOpenAI className="text-2xl" />
+            <span className="mr-2">···</span>
             <span className="mr-2 text-xs font-semibold">Languages</span>
             <SiTypescript className="text-2xl" />
             <SiJavascript className="text-2xl" />
@@ -43,12 +50,13 @@ const TechStack = () => {
             <span className="mr-2">···</span>
             <span className="mr-2 text-xs font-semibold">Frontend</span>
             <SiHtml5 className="text-2xl" />
-            <SiCss3 className="text-2xl" />
+            <SiCss className="text-2xl" />
             <SiSass className="text-2xl" />
             <SiReact className="text-2xl" />
             <SiRedux className="text-2xl" />
             <span className="mr-2">···</span>
             <span className="mr-2 text-xs font-semibold">Testing</span>
+            <SiJest className="text-2xl" />
             <SiVitest className="text-2xl" />
             <SiTestinglibrary className="text-2xl" />
             <span className="mr-2">···</span>
@@ -69,7 +77,6 @@ const TechStack = () => {
             <SiPostman className="text-2xl" />
             <span className="mr-2">···</span>
             <span className="mr-2 text-xs font-semibold">DevOps</span>
-            <SiAwsamplify className="text-2xl" />
             <SiGithub className="text-2xl" />
             <SiGithubactions className="text-2xl" />
             <SiDocker className="text-2xl" />

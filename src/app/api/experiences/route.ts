@@ -17,7 +17,7 @@ export async function GET(request: Request) {
       roles: [
         {
           position: "Software Engineer",
-          description: "Building Single Screen Trading at Punch",
+          description: "Developed and customized trading applications for the financial domain using React and SciChart, delivering a real-time single-screen trading experience with custom indicators. Partnered with product owners to refine business requirements, estimate user stories, and support sprint planning. Managed end-to-end releases, ensuring smooth deployments and reliable production rollouts.",
           start_date: "Oct 2025",
           end_date: "Present",
           tech_stack: [
@@ -29,6 +29,14 @@ export async function GET(request: Request) {
             "TypeScript",
             "Git",
             "WebSocket",
+            "Spec-Driven Software Development",
+            "SciChart",
+            "Jest",
+            "React Testing Library",
+            "LokiJS",
+            "Tanstack Query",
+            "Claude Code + Skills",
+            "Firebase (Firestore, Realtime Database)",
           ],
         },
       ],

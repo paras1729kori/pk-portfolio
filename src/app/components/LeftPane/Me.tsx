@@ -2,7 +2,7 @@
 /** library import */
 import { useState } from "react";
 import Image from "next/image";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
 import { RiTwitterXFill } from "react-icons/ri";
 import Link from "next/link";
 
@@ -12,14 +12,9 @@ import bomb from "../../../../public/images/bomb.png";
 
 const Me = () => {
   const [flipImage, setFlipImage] = useState<boolean>(true);
-  const [isAnimating, setIsAnimating] = useState<boolean>(false);
 
   const handleClick = () => {
-    setIsAnimating(true);
-    setTimeout(() => {
-      setFlipImage(!flipImage);
-      setIsAnimating(false);
-    }, 1200);
+      setFlipImage(prev => !prev);
   };
 
   return (
@@ -30,9 +25,7 @@ const Me = () => {
           <Image
             src={profileImage}
             alt="profileImage.png"
-            className={`select-none w-1/2 rounded-full cursor-pointer ${
-              isAnimating ? "animate-spin-vertical" : ""
-            }`}
+            className={`select-none w-1/2 rounded-full cursor-pointer`}
             placeholder="blur"
             onClick={handleClick}
           />
@@ -40,9 +33,7 @@ const Me = () => {
           <Image
             src={bomb}
             alt="profileImage.png"
-            className={`select-none w-1/2 rounded-full cursor-pointer ${
-              isAnimating ? "animate-spin-vertical" : ""
-            }`}
+            className={`select-none w-1/2 rounded-full cursor-pointer`}
             placeholder="blur"
             onClick={handleClick}
           />
@@ -66,7 +57,7 @@ const Me = () => {
           className="hover:text-gray-300"
           target="_blank"
         >
-          <AiFillGithub />
+          <IoLogoGithub />
         </Link>
         <Link
           href="https://twitter.com/paras1kori"
@@ -80,7 +71,7 @@ const Me = () => {
           className="hover:text-gray-300"
           target="_blank"
         >
-          <AiFillLinkedin />
+          <IoLogoLinkedin />
         </Link>
       </div>
     </div>

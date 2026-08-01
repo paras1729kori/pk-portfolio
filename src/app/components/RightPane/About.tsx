@@ -18,30 +18,40 @@ const About = () => {
       <h1 className="text-sm font-extrabold uppercase">About</h1>
       <div className="flex flex-col gap-3">
         <p className="">
-          My journey into <span className="text-white">computer science</span>{" "}
-          commenced during my high school years. It was in those formative days
-          that our professor introduced us to the fundamentals of HTML, CSS, and
-          JavaScript. I discovered immense joy in crafting small webpages from
-          the ground up. Since then, my passion for{" "}
-          <span className="text-white">computer science</span>, with a
-          particular emphasis on{" "}
-          <span className="text-white">web development</span>, has continued to
-          flourish.
+          My journey into <span className="text-white">computer science</span> began
+          during my high school years, where I was first introduced to
+          <span className="text-white"> HTML</span>,
+          <span className="text-white"> CSS</span>, and
+          <span className="text-white"> JavaScript</span>. Building my first web pages
+          from scratch sparked a passion for creating software that has only grown
+          stronger over the years.
         </p>
 
-        <p>
-          I'm finally bringing to life the ideas I've been nurturing for years.
-          My current focus is on mastering the intricacies of{" "}
-          <span className="text-white">DevOps</span>,{" "}
-          <span className="text-white">Cloud Computing</span>, and{" "}
-          <span className="text-white">System Design</span>. I'm exploring ways
-          to streamline workflows, build scalable cloud solutions, and design
-          systems that are both robust and efficient. Additionally, I've started
-          learning <span className="text-white">UI/UX principles</span> and
-          skills to ensure the solutions I create are not only impactful but
-          also <span className="text-white">user-friendly</span>. It's an
-          exciting journey, pushing me to grow and inspiring me to create
-          meaningful, impactful solutions.
+        <p className="">
+          Today, I'm a <span className="text-white">Software Engineer</span> with
+          <span className="text-white"> 3+ years of experience</span> building
+          performant, scalable, and accessible web applications using
+          <span className="text-white"> React</span>,
+          <span className="text-white"> TypeScript</span>,
+          <span className="text-white"> Redux</span>, and
+          <span className="text-white"> Tailwind CSS</span>. I enjoy crafting intuitive
+          user experiences, writing maintainable code, and leveraging
+          <span className="text-white"> AI-assisted development</span> to deliver
+          high-quality software faster.
+        </p>
+
+        <p className="">
+          Beyond frontend engineering, I'm actively expanding my expertise in
+          <span className="text-white"> Full-Stack Development</span>,
+          <span className="text-white"> DevOps</span>,
+          <span className="text-white"> Cloud Computing</span>,
+          <span className="text-white"> System Design</span>, and
+          <span className="text-white"> UI/UX Design</span>. My goal is to build
+          <span className="text-white"> scalable</span>,
+          <span className="text-white"> user-centric</span>, and
+          <span className="text-white"> impactful software</span> while continuously
+          growing into a well-rounded engineer capable of taking products from idea to
+          production.
         </p>
 
         <div className="">
@@ -85,9 +95,8 @@ const About = () => {
             />
           </div>
           <div
-            className={`mt-10 ${
-              travellingImg ? "flex justify-center" : "hidden"
-            }`}
+            className={`mt-10 ${travellingImg ? "flex justify-center" : "hidden"
+              }`}
           >
             <Image
               loading="lazy"
