@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 
 /** custom imports */
 import { ProjectDataType } from "@/utils/allInterfaces";
-import nftLandingPage from "../../../../public/images/nftLandingPage.png";
+import ghostpin from "../../../../public/images/ghost-pin.png";
 import quickTaskMaster from "../../../../public/images/quickTaskMaster.png";
 import boardDashboard from "../../../../public/images/boardDashboard.png";
 import myPortfolio from "../../../../public/images/myPortfolio.png";
@@ -12,6 +12,25 @@ import breaditto from "../../../../public/images/breaditto.png";
 
 export async function GET(request: Request) {
   const data: ProjectDataType[] = [
+    {
+      id: uuidv4(),
+      title: "Ghostpin",
+      deployed_link: "https://ghostpin.vercel.app/",
+      github_url: "https://github.com/paras1729kori/ghostpin",
+      image_url: ghostpin,
+      description:
+        `Ghostpin — drop a pin that ghosts itself. Share your live location in one tap, no app, no account, no creepy tracking. The link self-destructs in 5, 10, or 15 minutes. Perfect for | "where ARE you?" moments.`,
+      tech_stack: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Node.js",
+        "Docker",
+        "Upstash - Redis + Ratelimit",
+        "Maplibre GL"
+      ],
+    },
     {
       id: uuidv4(),
       title: "Quick-Task-Master",
@@ -59,16 +78,16 @@ export async function GET(request: Request) {
         "College Project",
       ],
     },
-    {
-      id: uuidv4(),
-      title: "NFT Landing Page",
-      deployed_link: "https://pk-nft-landing-page.vercel.app/",
-      github_url: "https://github.com/paras1729kori/nft-landing-page",
-      image_url: nftLandingPage,
-      description:
-        "NFT Landing Page. This page serves as a captivating entrance to the exciting world of non-fungible tokens (NFTs) and showcases the unique digital assets that have been created.",
-      tech_stack: ["Vite", "React", "TypeScript", "Tailwind CSS"],
-    },
+    // {
+    //   id: uuidv4(),
+    //   title: "NFT Landing Page",
+    //   deployed_link: "https://pk-nft-landing-page.vercel.app/",
+    //   github_url: "https://github.com/paras1729kori/nft-landing-page",
+    //   image_url: nftLandingPage,
+    //   description:
+    //     "NFT Landing Page. This page serves as a captivating entrance to the exciting world of non-fungible tokens (NFTs) and showcases the unique digital assets that have been created.",
+    //   tech_stack: ["Vite", "React", "TypeScript", "Tailwind CSS"],
+    // },
     // {
     //   id: uuidv4(),
     //   title: "John Doe | Developer",
@@ -88,7 +107,7 @@ export async function GET(request: Request) {
       image_url: boardDashboard,
       description:
         "A dashboard app made for a hackathon. The app has 2 screens (Login page, Dashboard). With Next-Auth (App Router) and Next-Server (For creating in-build APIs). The dashboard uses react-chart-js 2 for rendering beautiful line and pie charts.",
-      tech_stack: ["Next.js", "TypeScript", "Tailwind CSS", "React Chart JS 2"],
+      tech_stack: ["Next.js", "TypeScript", "Tailwind CSS", "React Chart JS 2", "Google Cloud Platform"],
     },
     {
       id: uuidv4(),
@@ -106,7 +125,7 @@ export async function GET(request: Request) {
       image_url: breaditto,
       description:
         "Breaditto is a lightweight Reddit clone that aims to provide a simplified version of the popular social media platform. With a focus on essential features, Breaditto allows users to create communities, submit posts, comment on posts, and upvote/downvote content. It offers a familiar interface for users to engage in discussions, share information, and discover new content.",
-      tech_stack: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma"],
+      tech_stack: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "Upstash - Redis"],
     },
   ];
 
