@@ -51,7 +51,7 @@ const ProjectCard = ({ proj }: ProjectCardProps) => {
           </h1>
         )}
         <p className="text-sm mt-1">{proj.description}</p>
-        <div className="max-w-md flex flex-wrap">
+        <div className="flex flex-wrap">
           {pills
             ? pills.map((pill) => {
                 return <Pill key={proj.id} pill={pill} />;
@@ -92,10 +92,7 @@ const Projects = () => {
       </div>
       <div className="text-white flex items-center gap-2 hover:underline hover:underline-offset-4">
         <h1 className="font-bold">
-          <Link
-            href="https://github.com/paras1729kori?tab=repositories"
-            target="_blank"
-          >
+          <Link href="https://github.com/paras1729kori" target="_blank">
             View All Projects on GitHub
           </Link>
         </h1>

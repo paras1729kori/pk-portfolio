@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 /** library import */
-import { BsDashLg, BsFillArrowUpRightSquareFill } from "react-icons/bs";
+import { BsDashLg } from "react-icons/bs";
 
 const Education = () => {
   return (
@@ -15,14 +15,11 @@ const Education = () => {
         </div>
 
         <div>
-          <div className="text-white flex items-center gap-2">
-            <h1 className="text-white font-bold hover:underline hover:underline-offset-4">
-              <Link href={"https://kjsit.somaiya.edu.in/en"} target="_blank">
-                K. J. Somaiya Institute of Technology, Sion (Mumbai)
-              </Link>
-            </h1>
-            <BsFillArrowUpRightSquareFill className="text-md" />
-          </div>
+          <h1 className="text-white font-bold hover:underline hover:underline-offset-4">
+            <Link href={"https://kjsit.somaiya.edu.in/en"} target="_blank">
+              K. J. Somaiya Institute of Technology, Sion (Mumbai)
+            </Link>
+          </h1>
           <h2 className="font-bold text-gray-500">
             Computer Science Engineering
           </h2>

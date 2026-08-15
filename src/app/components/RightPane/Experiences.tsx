@@ -13,6 +13,9 @@ interface ExperienceCardProps {
   exp: ExperienceDataType;
 }
 
+export const resumeLink =
+  "https://drive.google.com/file/d/13azqIbUQiuILTRr59r2tdrv_hLj9Ig8L/view?usp=sharing";
+
 const ExperienceCard = ({ exp }: ExperienceCardProps) => {
   const allRoles = exp?.roles || [];
   return (
@@ -56,7 +59,7 @@ const ExperienceCard = ({ exp }: ExperienceCardProps) => {
                   </div>
                 )}
                 <p className="text-sm mt-1">{item?.description}</p>
-                <div className="max-w-md flex flex-wrap">
+                <div className="flex flex-wrap">
                   {pills?.length > 0
                     ? pills?.map((pill) => {
                         return <Pill key={exp.id} pill={pill} />;
@@ -74,7 +77,7 @@ const ExperienceCard = ({ exp }: ExperienceCardProps) => {
 
 const Experiences = () => {
   const [experiences, setExperiences] = useState<ExperienceDataType[] | null>(
-    null
+    null,
   );
   useEffect(() => {
     const fetchExperiences = async () => {
@@ -85,9 +88,6 @@ const Experiences = () => {
 
     fetchExperiences();
   }, []);
-
-  const resumeLink =
-    "https://drive.google.com/file/d/13azqIbUQiuILTRr59r2tdrv_hLj9Ig8L/view?usp=sharing";
 
   return (
     <div className="flex flex-col gap-8">
