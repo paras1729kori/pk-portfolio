@@ -3,5 +3,7 @@ export { default as Experiences } from "./Experiences";
 export { default as Projects } from "./Projects";
 export { default as Education } from "./Education";
 export { default as TechStack } from "./TechStack";
-export { default as ContactUs } from "./ContactUs";
+export { default as Contact } from "./Contact";
 export { default as Philosophy } from "./Philosophy";
+export { default as QuickLinks } from "./QuickLinks";
+export { default as CaseStudies } from "./CaseStudies";

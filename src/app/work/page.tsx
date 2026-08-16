@@ -2,12 +2,7 @@
 import Link from "next/link";
 
 /** custom imports */
-import {
-  TechStack,
-  Experiences,
-  Education,
-  Projects,
-} from "../components/RightPane";
+import { TechStack, Experiences, Education } from "../components/RightPane";
 import SidebarMenu from "../components/common/SidebarMenu";
 import Menu from "../components/common/Menu";
 
@@ -29,7 +24,6 @@ const Work = () => {
         <nav className="flex flex-col gap-24 lg:w-3/4 pt-12 lg:py-24">
           <TechStack />
           <Experiences />
-          <Projects />
           <Education />
         </nav>
       </main>

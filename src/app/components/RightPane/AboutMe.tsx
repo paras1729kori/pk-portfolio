@@ -14,7 +14,7 @@ const AboutMe = () => {
   const [foodImg, setFoodImg] = useState<boolean>(false);
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8" id="whoami">
       <h1 className="text-sm font-extrabold italic">Who is Paras?</h1>
       <div className="flex flex-col gap-3">
         <p>
@@ -43,7 +43,7 @@ const AboutMe = () => {
           <p>
             When AFK, I'm usually{" "}
             <span
-              className="cursor-pointer font-bold animate-pulse"
+              className="cursor-pointer font-bold underline underline-offset-4"
               onMouseEnter={() => setMovieImg(true)}
               onMouseLeave={() => setMovieImg(false)}
             >
@@ -51,7 +51,7 @@ const AboutMe = () => {
             </span>
             ,{" "}
             <span
-              className="cursor-pointer font-bold animate-pulse"
+              className="cursor-pointer font-bold underline underline-offset-4"
               onMouseEnter={() => setTravellingImg(true)}
               onMouseLeave={() => setTravellingImg(false)}
             >
@@ -59,7 +59,7 @@ const AboutMe = () => {
             </span>
             , indulging in some gaming or exploring new{" "}
             <span
-              className="cursor-pointer font-bold animate-pulse"
+              className="cursor-pointer font-bold underline underline-offset-4"
               onMouseEnter={() => setFoodImg(true)}
               onMouseLeave={() => setFoodImg(false)}
             >

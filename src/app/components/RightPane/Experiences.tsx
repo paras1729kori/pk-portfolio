@@ -90,7 +90,7 @@ const Experiences = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8" id="experience">
       <h1 className="text-sm font-extrabold uppercase">Experience</h1>
       <div className="flex flex-col gap-8">
         {experiences ? (

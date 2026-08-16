@@ -1,10 +1,9 @@
-"use client";
 /** library import */
 import React from "react";
 
-const ContactUs = () => {
+const Contact = () => {
   return (
-    <div className="w-full flex flex-col gap-8 lg:max-w-lg">
+    <div className="w-full flex flex-col gap-8 lg:max-w-lg" id="contact">
       <h1 className="text-sm font-extrabold uppercase">Contact</h1>
       <div className="w-full">
         <h2 className="font-bold text-white">
@@ -24,4 +23,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default Contact;

@@ -1,6 +1,6 @@
 const Philosophy = () => {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8" id="engineering-philosophy">
       <h1 className="text-sm font-extrabold uppercase">
         Engineering Philosophy
       </h1>

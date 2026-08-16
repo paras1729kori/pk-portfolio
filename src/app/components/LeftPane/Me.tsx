@@ -3,9 +3,6 @@
 /** library import */
 import { useState } from "react";
 import Image from "next/image";
-import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
-import { RiTwitterXFill } from "react-icons/ri";
-import Link from "next/link";
 
 /** custom imports */
 import profileImage from "../../../../public/images/profileImage.jpeg";
@@ -15,9 +12,7 @@ import Menu from "../common/Menu";
 const Me = () => {
   const [flipImage, setFlipImage] = useState<boolean>(true);
 
-  const handleClick = () => {
-    setFlipImage((prev) => !prev);
-  };
+  const handleMouseEvent = () => setFlipImage((prev) => !prev);
 
   return (
     <div className="flex flex-col gap-4 lg:h-screen lg:justify-between">
@@ -26,17 +21,19 @@ const Me = () => {
         <Image
           src={profileImage}
           alt="profileImage.png"
-          className={`select-none w-1/2 rounded-full cursor-pointer`}
+          className={`select-none w-1/2 lg:w-3/4 rounded-full`}
           placeholder="blur"
-          onClick={handleClick}
+          onMouseEnter={handleMouseEvent}
+          onMouseLeave={handleMouseEvent}
         />
       ) : (
         <Image
           src={bomb}
           alt="profileImage.png"
-          className={`select-none w-1/2 rounded-full cursor-pointer`}
+          className={`select-none w-1/2 lg:w-3/4 rounded-full`}
           placeholder="blur"
-          onClick={handleClick}
+          onMouseEnter={handleMouseEvent}
+          onMouseLeave={handleMouseEvent}
         />
       )}
 

@@ -1,43 +1,29 @@
-"use client";
-
 /** library imports */
 import Link from "next/link";
+import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
+import { IoDocumentText } from "react-icons/io5";
 
 /** custom imports */
 import { Me } from "./components/LeftPane";
 import SidebarMenu from "./components/common/SidebarMenu";
-import { useState } from "react";
-
-import profileImage from "../../public/images/profileImage.jpeg";
-import Image from "next/image";
-import bomb from "../../public/images/bomb.png";
-
-/** library import */
-import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
-import { IoDocument } from "react-icons/io5";
 import { resumeLink } from "./components/RightPane/Experiences";
+import { QuickLinks } from "./components/RightPane";
 
 const Home = () => {
-  const [flipImage, setFlipImage] = useState<boolean>(true);
-
-  const handleClick = () => {
-    setFlipImage((prev) => !prev);
-  };
-
   return (
     <>
       <SidebarMenu />
       <main className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 leading-relaxed md:px-12 md:py-20 lg:flex lg:px-12 lg:py-0">
-        <div className="lg:w-1/2 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:flex-col lg:justify-between lg:py-24">
+        <div className="lg:w-1/4 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:flex-col lg:justify-between lg:py-24">
           <Me />
         </div>
 
-        <nav className="w-full flex flex-col gap-24 justify-between lg:w-1/2 pt-8 lg:py-24">
-          <div className="w-full flex flex-col gap-8">
+        <nav className="w-full flex flex-col gap-24 justify-between lg:w-3/4 pt-8 lg:py-24">
+          <div className="flex flex-col gap-24">
             {/* Me Details */}
             <div className="w-full flex flex-col gap-2">
               <h1 className="text-white text-4xl font-extrabold lg:text-5xl">
-                <Link href="/">Paras Kori</Link>
+                Paras Kori
               </h1>
               <h2 className="text-white text-lg font-semibold">
                 Software Engineer
@@ -71,14 +57,16 @@ const Home = () => {
                   className="hover:text-gray-300"
                   target="_blank"
                 >
-                  <IoDocument />
+                  <IoDocumentText />
                 </Link>
               </div>
             </div>
+
+            <QuickLinks />
           </div>
 
           <section className="flex flex-col gap-4">
-            <div className="text-sm lg:max-w-md">
+            <div className="text-sm">
               <p>
                 Written in{" "}
                 <Link

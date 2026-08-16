@@ -76,7 +76,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8" id="projects">
       <h1 className="text-sm font-extrabold uppercase">Top Projects</h1>
       <div className="flex flex-col gap-8">
         {projects ? (

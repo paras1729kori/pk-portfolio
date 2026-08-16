@@ -3,7 +3,7 @@
 /** custom imports */
 import Menu from "../components/common/Menu";
 import SidebarMenu from "../components/common/SidebarMenu";
-import { Philosophy, AboutMe, ContactUs } from "../components/RightPane";
+import { Philosophy, AboutMe, Contact } from "../components/RightPane";
 
 const About = () => {
   return (
@@ -23,7 +23,7 @@ const About = () => {
         <nav className="flex flex-col gap-24 lg:w-3/4 pt-12 lg:py-24">
           <AboutMe />
           <Philosophy />
-          <ContactUs />
+          <Contact />
         </nav>
       </main>
     </>

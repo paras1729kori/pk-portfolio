@@ -4,11 +4,11 @@ export const routes: Array<{ id: number; title: string; to: string }> = [
     title: "Home",
     to: "/",
   },
-  // {
-  //   id: 2,
-  //   title: "Systems", // case studies + projects
-  //   to: "/systems",
-  // },
+  {
+    id: 2,
+    title: "Systems", // case studies + projects
+    to: "/systems",
+  },
   {
     id: 3,
     title: "Work", // experience
