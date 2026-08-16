@@ -11,12 +11,14 @@ const Menu = () => {
   return (
     <nav className="hidden lg:flex flex-col gap-2 text-base w-fit">
       {routes?.map((route) => {
+        const Icon = route?.icon;
+
         return (
           <Link href={route?.to} key={route?.id}>
             <div
-              className={`font-semibold ${pathname === route?.to ? "text-slate-200" : "text-slate-700"}`}
+              className={`font-semibold text-sm flex items-center gap-1 ${pathname === route?.to ? "text-slate-200" : "text-slate-700"}`}
             >
-              {route?.title}
+              <Icon /> {route?.title}
             </div>
           </Link>
         );
