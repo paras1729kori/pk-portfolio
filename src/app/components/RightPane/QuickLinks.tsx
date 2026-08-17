@@ -32,7 +32,7 @@ const QuickLinks = () => {
           className="w-fit hover:underline underline-offset-4"
           href="/systems"
         >
-          Projects
+          Case Study
         </Link>
         <Link
           className="w-fit hover:underline underline-offset-4"

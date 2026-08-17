@@ -27,3 +27,11 @@ export interface ProjectDataType {
   description: string;
   tech_stack?: string[];
 }
+
+export interface BlogDataType {
+  id: string;
+  title: string;
+  shortDescription: string;
+  link: string;
+  date: string;
+}

@@ -4,29 +4,34 @@ import { VscServerProcess } from "react-icons/vsc";
 import { GiSuitcase } from "react-icons/gi";
 import { MdFrontHand } from "react-icons/md";
 
-export const routes: Array<{ id: number; title: string; to: string, icon: IconType }> = [
+export const routes: Array<{
+  id: number;
+  title: string;
+  to: string;
+  icon: IconType;
+}> = [
   {
     id: 1,
     title: "Home",
     to: "/",
-    icon: IoHome
+    icon: IoHome,
   },
   {
     id: 2,
-    title: "Systems", // case studies + projects
+    title: "Systems", // case study + projects
     to: "/systems",
-    icon: VscServerProcess
+    icon: VscServerProcess,
   },
   {
     id: 3,
     title: "Work", // experience
     to: "/work",
-    icon: GiSuitcase
+    icon: GiSuitcase,
   },
   {
     id: 4,
     title: "About",
     to: "/about",
-    icon: MdFrontHand
+    icon: MdFrontHand,
   },
 ];

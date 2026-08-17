@@ -1,25 +1,13 @@
 "use client";
 
 /** library imports */
-// import { usePathname } from "next/navigation";
-// import Link from "next/link";
 
 /** custom imports */
 import Menu from "../components/common/Menu";
 import SidebarMenu from "../components/common/SidebarMenu";
-import { Projects, CaseStudies } from "../components/RightPane";
+import { Projects, CaseStudy } from "../components/RightPane";
 
 const Systems = () => {
-  // const pathname = usePathname();
-
-  // const blogs: Array<{ id: number; title: string; to: string }> = [
-  //   {
-  //     id: 1,
-  //     title: "Hello, World!",
-  //     to: "#",
-  //   },
-  // ];
-
   return (
     <>
       <SidebarMenu />
@@ -35,22 +23,8 @@ const Systems = () => {
         </div>
 
         <nav className="flex flex-col gap-24 lg:w-3/4 pt-12 lg:py-24">
+          <CaseStudy />
           <Projects />
-          <CaseStudies />
-
-          {/* <section className="flex flex-col gap-8">
-            {blogs?.map((blog) => {
-              return (
-                <Link href={`${blog?.to}`} key={blog?.id} target="_blank">
-                  <div
-                    className={`font-semibold ${pathname === blog?.to ? "text-slate-200" : "text-slate-700"}`}
-                  >
-                    {blog?.title}
-                  </div>
-                </Link>
-              );
-            })}
-          </section> */}
         </nav>
       </main>
     </>
