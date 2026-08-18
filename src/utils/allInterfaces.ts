@@ -34,4 +34,5 @@ export interface BlogDataType {
   shortDescription: string;
   link: string;
   date: string;
+  readingTime: string;
 }

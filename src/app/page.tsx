@@ -7,7 +7,7 @@ import { IoDocumentText } from "react-icons/io5";
 import { Me } from "./components/LeftPane";
 import SidebarMenu from "./components/common/SidebarMenu";
 import { resumeLink } from "./components/RightPane/Experiences";
-import { QuickLinks } from "./components/RightPane";
+import { Blogs, QuickLinks } from "./components/RightPane";
 
 const Home = () => {
   return (
@@ -62,6 +62,7 @@ const Home = () => {
               </div>
             </div>
 
+            <Blogs />
             <QuickLinks />
           </div>
 

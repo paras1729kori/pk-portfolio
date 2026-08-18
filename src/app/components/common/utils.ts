@@ -18,8 +18,8 @@ export const routes: Array<{
   },
   {
     id: 2,
-    title: "Systems", // case study + projects
-    to: "/systems",
+    title: "Projects",
+    to: "/projects",
     icon: VscServerProcess,
   },
   {

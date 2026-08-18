@@ -6,4 +6,4 @@ export { default as TechStack } from "./TechStack";
 export { default as Contact } from "./Contact";
 export { default as Philosophy } from "./Philosophy";
 export { default as QuickLinks } from "./QuickLinks";
-export { default as CaseStudy } from "./CaseStudy";
+export { default as Blogs } from "./Blogs";

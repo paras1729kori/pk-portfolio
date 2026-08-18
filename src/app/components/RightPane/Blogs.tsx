@@ -7,7 +7,6 @@ import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import Link from "next/link";
 
 /** custom import */
-import Pill from "./Pill";
 import { BlogDataType } from "@/utils/allInterfaces";
 
 interface BlogCardProps {
@@ -19,7 +18,7 @@ const BlogCard = ({ blog }: BlogCardProps) => {
     <div>
       {/* duration */}
       <div className="text-xs flex gap-1 items-center uppercase">
-        {blog.date}
+        {blog.date} <BsDashLg /> {blog?.readingTime}
       </div>
 
       {/* content */}
@@ -48,7 +47,7 @@ const BlogCard = ({ blog }: BlogCardProps) => {
   );
 };
 
-const CaseStudy = () => {
+const Blogs = () => {
   const [blogs, setBlogs] = useState<BlogDataType[] | null>(null);
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -61,8 +60,8 @@ const CaseStudy = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-8" id="case-studies">
-      <h1 className="text-sm font-extrabold uppercase">Case Study</h1>
+    <div className="flex flex-col gap-8" id="blogs">
+      <h1 className="text-sm font-extrabold uppercase">Blogs</h1>
       <div className="flex flex-col gap-8">
         {blogs ? (
           blogs.map((blog) => {
@@ -79,4 +78,4 @@ const CaseStudy = () => {
   );
 };
 
-export default CaseStudy;
+export default Blogs;

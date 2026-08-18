@@ -8,6 +8,15 @@ const QuickLinks = () => {
       <h1 className="text-sm font-extrabold uppercase">Quick Links</h1>
       <div className="flex flex-col gap-2">
         <Link
+          className="w-fit hover:underline underline-offset-4"
+          href="/work/#experience"
+        >
+          Experience
+        </Link>
+        <Link className="w-fit hover:underline underline-offset-4" href="/work">
+          Tech Stack
+        </Link>
+        <Link
           className="w-fit hover:underline underline-offset-4 italic"
           href="/about"
         >
@@ -18,21 +27,6 @@ const QuickLinks = () => {
           href="/about/#engineering-philosophy"
         >
           Engineering Philosophy
-        </Link>
-        <Link
-          className="w-fit hover:underline underline-offset-4"
-          href="/work/#experience"
-        >
-          Experience
-        </Link>
-        <Link className="w-fit hover:underline underline-offset-4" href="/work">
-          Tech Stack
-        </Link>
-        <Link
-          className="w-fit hover:underline underline-offset-4"
-          href="/systems"
-        >
-          Case Study
         </Link>
         <Link
           className="w-fit hover:underline underline-offset-4"
