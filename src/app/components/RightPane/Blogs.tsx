@@ -1,13 +1,11 @@
-"use client";
-
 /** library import */
-import { useState, useEffect } from "react";
-import { BsFillArrowUpRightSquareFill, BsDashLg, BsDot } from "react-icons/bs";
+import { BsFillArrowUpRightSquareFill, BsDashLg } from "react-icons/bs";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import Link from "next/link";
 
 /** custom import */
 import { BlogDataType } from "@/utils/allInterfaces";
+import { blogs } from "@/data/blogs";
 
 interface BlogCardProps {
   blog: BlogDataType;
@@ -47,18 +45,7 @@ const BlogCard = ({ blog }: BlogCardProps) => {
   );
 };
 
-const Blogs = () => {
-  const [blogs, setBlogs] = useState<BlogDataType[] | null>(null);
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      const res = await fetch("/api/blogs");
-      const data = await res.json();
-      setBlogs(data);
-    };
-
-    fetchBlogs();
-  }, []);
-
+const Blogs = async () => {
   return (
     <div className="flex flex-col gap-8" id="blogs">
       <h1 className="text-sm font-extrabold uppercase">Blogs</h1>

@@ -9,6 +9,7 @@ import { AiOutlineLoading3Quarters } from "react-icons/ai";
 /** custom imports */
 import Pill from "./Pill";
 import { ProjectDataType } from "@/utils/allInterfaces";
+import { projects } from "@/data/projects";
 
 interface ProjectCardProps {
   proj: ProjectDataType;
@@ -64,17 +65,6 @@ const ProjectCard = ({ proj }: ProjectCardProps) => {
 };
 
 const Projects = () => {
-  const [projects, setProjects] = useState<ProjectDataType[] | null>(null);
-  useEffect(() => {
-    const fetchProjects = async () => {
-      const res = await fetch("/api/projects");
-      const data = await res.json();
-      setProjects(data);
-    };
-
-    fetchProjects();
-  }, []);
-
   return (
     <div className="flex flex-col gap-8" id="projects">
       <h1 className="text-sm font-extrabold uppercase">Top Projects</h1>

@@ -1,6 +1,5 @@
-"use client";
-import Link from "next/link";
 /** library import */
+import Link from "next/link";
 import { BsDashLg } from "react-icons/bs";
 
 const Education = () => {

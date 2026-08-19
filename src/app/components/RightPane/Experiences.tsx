@@ -1,6 +1,4 @@
-"use client";
 /** library import */
-import { useState, useEffect } from "react";
 import { BsFillArrowUpRightSquareFill, BsDashLg, BsDot } from "react-icons/bs";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import Link from "next/link";
@@ -8,6 +6,7 @@ import Link from "next/link";
 /** custom import */
 import Pill from "./Pill";
 import { ExperienceDataType } from "@/utils/allInterfaces";
+import { experiences } from "@/data/experiences";
 
 interface ExperienceCardProps {
   exp: ExperienceDataType;
@@ -76,19 +75,6 @@ const ExperienceCard = ({ exp }: ExperienceCardProps) => {
 };
 
 const Experiences = () => {
-  const [experiences, setExperiences] = useState<ExperienceDataType[] | null>(
-    null,
-  );
-  useEffect(() => {
-    const fetchExperiences = async () => {
-      const res = await fetch("/api/experiences");
-      const data = await res.json();
-      setExperiences(data);
-    };
-
-    fetchExperiences();
-  }, []);
-
   return (
     <div className="flex flex-col gap-8" id="experience">
       <h1 className="text-sm font-extrabold uppercase">Experience</h1>
