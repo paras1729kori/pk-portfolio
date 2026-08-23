@@ -2,6 +2,7 @@ import { ProjectDataType } from "@/utils/allInterfaces";
 
 /** custom imports */
 import ghostpin from "../../public/images/ghost-pin.png";
+import quickTask from "../../public/images/quick-task.png";
 
 export const projects: ProjectDataType[] = [
   {
@@ -22,23 +23,25 @@ export const projects: ProjectDataType[] = [
       "Maplibre GL",
     ],
   },
-  // {
-  //   id: crypto.randomUUID(),
-  //   title: "Quick Task",
-  //   deployed_link: "https://quick-task-master.vercel.app/",
-  //   github_url: "https://github.com/paras1729kori/quick-task",
-  //   image_url: quickTask,
-  //   description: `Quick Task Master is a full-stack web application designed to help users efficiently manage their daily tasks. With an intuitive interface and robust backend, it allows users to create, update, and delete tasks seamlessly.`,
-  //   tech_stack: [
-  //     "Next.js",
-  //     "TypeScript",
-  //     "Tailwind CSS",
-  //     "Node.js",
-  //     "Docker",
-  //     "PostgreSQL",
-  //     "Prisma ORM",
-  //   ],
-  // },
+  {
+    id: crypto.randomUUID(),
+    title: "Quick Task",
+    deployed_link: "https://quick-task-master.vercel.app/",
+    github_url: "https://github.com/paras1729kori/quick-task",
+    image_url: quickTask,
+    description: `Quick Task Master is a full-stack web application designed to help users efficiently manage their daily tasks. With an intuitive interface and robust backend, it allows users to create, update, and delete tasks seamlessly.`,
+    tech_stack: [
+      "Next.js",
+      "Nest.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "PostgreSQL",
+      "Prisma ORM",
+      "Supabase",
+      "Vercel",
+    ],
+  },
   {
     id: crypto.randomUUID(),
     title: "Portfolio",
