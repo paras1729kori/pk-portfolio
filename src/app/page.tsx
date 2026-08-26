@@ -31,9 +31,9 @@ const Home = () => {
               <p className="w-full text-md">
                 I'm a Software Engineer with 3+ years of experience focused on
                 building fast, accessible, and thoughtfully designed web
-                experiences. I work primarily with React, TypeScript, and modern
-                web technologies, with a growing focus on AI-powered products
-                and full-stack development.
+                experiences. I work primarily with React, TypeScript, Python and
+                modern web technologies, with a growing focus on AI-powered
+                products and full-stack development.
               </p>
 
               {/* Socials */}

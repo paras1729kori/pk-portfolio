@@ -108,8 +108,8 @@ const TechStack = () => {
       {/* Categories */}
       <div className="space-y-2 text-base">
         <p>
-          <span className="font-semibold">Programming Languages:</span> HTML5,
-          CSS3, JavaScript, TypeScript, Python, SQL
+          <span className="font-semibold">Programming Languages:</span>{" "}
+          JavaScript, TypeScript, Python, SQL
         </p>
 
         <p>
@@ -131,6 +131,12 @@ const TechStack = () => {
         <p>
           <span className="font-semibold">Backend:</span> FastAPI, Node.js,
           RESTful APIs, WebSocket, GraphQL
+        </p>
+
+        <p>
+          <span className="font-semibold">FastAPI Ecosystem:</span> Pydantic
+          Validation, SQLAlchemy, Alembic migration, JWT, OAuth2, Authentication
+          and Authorization, Dependency Injection, RBAC systems
         </p>
 
         <p>
