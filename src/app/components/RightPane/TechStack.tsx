@@ -108,8 +108,13 @@ const TechStack = () => {
       {/* Categories */}
       <div className="space-y-2 text-base">
         <p>
-          <span className="font-semibold">Frontend:</span> HTML5, CSS3,
-          JavaScript (ES6+), TypeScript, Tailwind CSS, Bootstrap, RxJS
+          <span className="font-semibold">Programming Languages:</span> HTML5,
+          CSS3, JavaScript, TypeScript, Python, SQL
+        </p>
+
+        <p>
+          <span className="font-semibold">Frontend:</span> HTML5, CSS3, Tailwind
+          CSS, Bootstrap, RxJS
         </p>
 
         <p>
@@ -124,37 +129,33 @@ const TechStack = () => {
         </p>
 
         <p>
-          <span className="font-semibold">Backend:</span> Node.js, Express.js,
-          RESTful APIs, WebSocket
+          <span className="font-semibold">Backend:</span> FastAPI, Node.js,
+          RESTful APIs, WebSocket, GraphQL
         </p>
 
         <p>
           <span className="font-semibold">Databases:</span> PostgreSQL, MongoDB,
-          MySQL
-        </p>
-
-        <p>
-          <span className="font-semibold">Responsive Web:</span> Responsive Web
-          Design (RWD)
+          Firebase
         </p>
 
         <p>
           <span className="font-semibold">Testing:</span> React Testing Library,
-          MSW, Vitest, Jest
+          MSW, Vitest, Jest, Pytest
         </p>
 
         <p>
           <span className="font-semibold">Development Tools:</span> Cursor, VS
-          Code, Figma, Adobe XD, Postman
+          Code, Figma, Adobe XD
         </p>
 
         <p>
-          <span className="font-semibold">Build & DevOps:</span> Git, GitHub,
-          GitHub Actions, Vite, Webpack, Babel, Docker, Firebase
+          <span className="font-semibold">Platform & DevOps:</span> Git, GitHub,
+          GitHub Actions, Postman, Vite, Webpack, Babel, Docker
         </p>
 
         <p>
-          <span className="font-semibold">LLMs:</span> Claude Code, OpenAI
+          <span className="font-semibold">LLMs:</span> Claude Code (with
+          Skills), Antigravity, Codex
         </p>
       </div>
 

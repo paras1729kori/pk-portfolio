@@ -19,24 +19,30 @@ const AboutMe = () => {
       <div className="flex flex-col gap-3">
         <p>
           My journey into <span className="text-white">computer science</span>{" "}
-          began during my high school years, where I was first introduced to{" "}
-          <span className="text-white">HTML</span>,{" "}
+          began in high school, where I first discovered the world of web
+          development through <span className="text-white">HTML</span>,{" "}
           <span className="text-white">CSS</span>, and{" "}
-          <span className="text-white">JavaScript</span>. Building my first web
-          pages from scratch sparked a passion for creating software that has
-          only grown stronger over the years.
+          <span className="text-white">JavaScript</span>. Building my very first
+          web pages from scratch was the spark that turned curiosity into a
+          genuine passion for crafting software — one that has only deepened
+          with every project since.
         </p>
 
         <p>
-          Beyond frontend engineering, I'm actively expanding my expertise in{" "}
-          <span className="text-white">Full-Stack Development</span>,{" "}
-          <span className="text-white">DevOps</span>,{" "}
-          <span className="text-white">Cloud Computing</span>,{" "}
-          <span className="text-white">System Design</span>, and{" "}
-          <span className="text-white">UI/UX Design</span>. My goal is to build
-          scalable, user-centric, and impactful software while continuously
-          growing into a well-rounded engineer capable of taking products from
-          idea to production.
+          That early fascination with the frontend grew into a full{" "}
+          <span className="text-white">Full-Stack Development</span> skill set,
+          spanning both frontend and backend engineering. I also bring hands-on
+          experience in <span className="text-white">System Design</span> and{" "}
+          <span className="text-white">UI/UX Design</span>, always with an eye
+          toward building things that are not just functional, but scalable,
+          intuitive, and genuinely useful to the people who use them.
+        </p>
+
+        <p>
+          My goal is simple: to keep growing into a{" "}
+          <span className="text-white">well-rounded engineer</span> who can take
+          a product from a raw idea all the way to a polished, production-ready
+          reality.
         </p>
 
         <div className="">
