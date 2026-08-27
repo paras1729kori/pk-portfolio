@@ -1,5 +1,5 @@
 /** library import */
-import { BsFillArrowUpRightSquareFill, BsDashLg } from "react-icons/bs";
+import { BsDashLg } from "react-icons/bs";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import Link from "next/link";
 
@@ -23,7 +23,7 @@ const BlogCard = ({ blog }: BlogCardProps) => {
       <div>
         <div className="text-white flex items-center gap-2">
           {blog?.link ? (
-            <h1 className="font-bold hover:underline hover:underline-offset-4">
+            <h1 className="font-bold hover:underline hover:underline-offset-4 text-sm">
               <Link
                 href={blog.link}
                 target="_blank"
@@ -33,11 +33,10 @@ const BlogCard = ({ blog }: BlogCardProps) => {
               </Link>
             </h1>
           ) : (
-            <h1 className="text-white flex items-center font-bold">
+            <h1 className="text-white flex items-center font-bold text-sm">
               {blog.title}
             </h1>
           )}
-          {blog?.link && <BsFillArrowUpRightSquareFill className="text-md" />}
         </div>
         <p className="text-sm mt-1">{blog?.shortDescription}</p>
       </div>
@@ -48,7 +47,7 @@ const BlogCard = ({ blog }: BlogCardProps) => {
 const Blogs = async () => {
   return (
     <div className="flex flex-col gap-8" id="blogs">
-      <h1 className="text-sm font-extrabold uppercase">Blogs</h1>
+      <h1 className="text-xs font-extrabold uppercase">Blogs</h1>
       <div className="flex flex-col gap-8">
         {blogs ? (
           blogs.map((blog) => {

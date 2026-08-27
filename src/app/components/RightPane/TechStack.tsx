@@ -103,10 +103,10 @@ const technologies = [
 const TechStack = () => {
   return (
     <section className="flex flex-col gap-8" id="tech-stack">
-      <h1 className="text-sm font-extrabold uppercase">Tech Stack</h1>
+      <h1 className="text-xs font-extrabold uppercase">Tech Stack</h1>
 
       {/* Categories */}
-      <div className="space-y-2 text-base">
+      <div className="space-y-2 text-sm">
         <p>
           <span className="font-semibold">Programming Languages:</span>{" "}
           JavaScript, TypeScript, Python, SQL
@@ -166,7 +166,7 @@ const TechStack = () => {
       </div>
 
       {/* Technology Icons */}
-      <div className="flex flex-wrap gap-4 lg:max-w-lg">
+      {/* <div className="flex flex-wrap gap-4 lg:max-w-lg">
         {technologies.map(({ name, icon: Icon }) => (
           <div
             key={name}
@@ -177,7 +177,7 @@ const TechStack = () => {
             <Icon className="text-lg" />
           </div>
         ))}
-      </div>
+      </div> */}
     </section>
   );
 };

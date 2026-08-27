@@ -1,8 +1,6 @@
 "use client";
 /** library import */
-import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { BsFillArrowUpRightSquareFill, BsLink45Deg } from "react-icons/bs";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
@@ -10,6 +8,7 @@ import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import Pill from "./Pill";
 import { ProjectDataType } from "@/utils/allInterfaces";
 import { projects } from "@/data/projects";
+import { IoLogoGithub } from "react-icons/io";
 
 interface ProjectCardProps {
   proj: ProjectDataType;
@@ -19,38 +18,29 @@ const ProjectCard = ({ proj }: ProjectCardProps) => {
   const pills = proj.tech_stack;
 
   return (
-    <div className="flex flex-col-reverse gap-4">
-      {proj?.image_url && (
-        <Image
-          src={proj.image_url}
-          alt="image.jpeg"
-          className="w-1/2 rounded-xl border border-slate-100"
-          placeholder="blur"
-        />
-      )}
+    <div className="flex flex-row-reverse gap-4">
       <div>
         <div className="text-white flex items-center gap-2">
           {proj?.deployed_link ? (
-            <h1 className="font-bold hover:underline hover:underline-offset-4">
-              <Link href={proj.deployed_link} target="_blank">
+            <h1 className="font-bold text-sm hover:underline hover:underline-offset-4">
+              <Link
+                href={proj.deployed_link}
+                target="_blank"
+                className="flex items-center gap-2"
+              >
                 {proj.title}
+                <BsFillArrowUpRightSquareFill className="text-xs" />
               </Link>
             </h1>
           ) : (
             <h1 className="font-bold">{proj.title}</h1>
           )}
-          {proj?.deployed_link && (
-            <BsFillArrowUpRightSquareFill className="text-md" />
+          {proj?.github_url && (
+            <Link href={proj.github_url} target="_blank">
+              <IoLogoGithub />
+            </Link>
           )}
         </div>
-        {proj?.github_url && (
-          <h1 className="flex items-center gap-1 text-sm font-semibold">
-            <BsLink45Deg />
-            <Link href={proj.github_url} target="_blank">
-              GitHub
-            </Link>
-          </h1>
-        )}
         <p className="text-sm mt-1">{proj.description}</p>
         <div className="flex flex-wrap">
           {pills
@@ -67,7 +57,7 @@ const ProjectCard = ({ proj }: ProjectCardProps) => {
 const Projects = () => {
   return (
     <div className="flex flex-col gap-8" id="projects">
-      <h1 className="text-sm font-extrabold uppercase">Top Projects</h1>
+      <h1 className="text-xs font-extrabold uppercase">Projects</h1>
       <div className="flex flex-col gap-8">
         {projects ? (
           projects.map((proj) => {
@@ -81,12 +71,12 @@ const Projects = () => {
         )}
       </div>
       <div className="text-white flex items-center gap-2 hover:underline hover:underline-offset-4">
-        <h1 className="font-bold">
+        <h1 className="font-bold text-sm">
           <Link href="https://github.com/paras1729kori" target="_blank">
             View All Projects on GitHub
           </Link>
         </h1>
-        <BsFillArrowUpRightSquareFill className="text-md" />
+        <BsFillArrowUpRightSquareFill className="text-xs" />
       </div>
     </div>
   );

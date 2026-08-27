@@ -96,23 +96,23 @@ export const experiences: ExperienceDataType[] = [
       },
     ],
   },
-  {
-    id: crypto.randomUUID(),
-    start_date: "Jun 2020",
-    end_date: "Aug 2020",
-    company_name: "JJ Sanganee & Co.",
-    cert_link:
-      "https://drive.google.com/file/d/1o-Ceohn1JSfI5qliFkcH7ZiKmwkw6PRc/view?usp=sharing",
-    mode: "Internship",
-    roles: [
-      {
-        position: "Full Stack Developer",
-        description:
-          "Created a drive clone for JJ Sanganee & Co. (Chartered Accountant) for sharing of files between employees and admins. Added a built-in chat section for ease of communication.",
-        start_date: "Jun 2020",
-        end_date: "Aug 2020",
-        tech_stack: ["Laravel", "MySQL", "Firebase", "Adode XD"],
-      },
-    ],
-  },
+  // {
+  //   id: crypto.randomUUID(),
+  //   start_date: "Jun 2020",
+  //   end_date: "Aug 2020",
+  //   company_name: "JJ Sanganee & Co.",
+  //   cert_link:
+  //     "https://drive.google.com/file/d/1o-Ceohn1JSfI5qliFkcH7ZiKmwkw6PRc/view?usp=sharing",
+  //   mode: "Internship",
+  //   roles: [
+  //     {
+  //       position: "Full Stack Developer",
+  //       description:
+  //         "Created a drive clone for JJ Sanganee & Co. (Chartered Accountant) for sharing of files between employees and admins. Added a built-in chat section for ease of communication.",
+  //       start_date: "Jun 2020",
+  //       end_date: "Aug 2020",
+  //       tech_stack: ["Laravel", "MySQL", "Firebase", "Adode XD"],
+  //     },
+  //   ],
+  // },
 ];

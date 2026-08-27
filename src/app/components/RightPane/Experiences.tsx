@@ -20,15 +20,15 @@ const ExperienceCard = ({ exp }: ExperienceCardProps) => {
   return (
     <div>
       {/* duration */}
-      <div className="text-xs flex gap-1 items-center uppercase">
+      {/* <div className="text-xs flex gap-1 items-center uppercase">
         {exp.start_date} <BsDashLg /> {exp.end_date}
-      </div>
+      </div> */}
 
       {/* content */}
       <div>
-        <div className="text-white flex items-center gap-2">
+        <div className="flex items-center gap-2 my-1">
           {exp?.cert_link ? (
-            <h1 className="font-bold hover:underline hover:underline-offset-4">
+            <h1 className="font-bold text-sm hover:underline hover:underline-offset-4">
               <Link
                 href={exp.cert_link}
                 target="_blank"
@@ -38,12 +38,12 @@ const ExperienceCard = ({ exp }: ExperienceCardProps) => {
               </Link>
             </h1>
           ) : (
-            <h1 className="text-white flex items-center font-bold">
+            <h1 className="flex items-center font-bold text-sm">
               {exp.company_name} <BsDot /> {exp.mode}
             </h1>
           )}
           {exp?.cert_link && (
-            <BsFillArrowUpRightSquareFill className="text-md" />
+            <BsFillArrowUpRightSquareFill className="text-xs" />
           )}
         </div>
         <div className="flex flex-col items-start gap-2">
@@ -51,12 +51,12 @@ const ExperienceCard = ({ exp }: ExperienceCardProps) => {
             const pills = item?.tech_stack || [];
             return (
               <div key={idx}>
-                <h2 className="font-bold text-gray-500">{item?.position}</h2>
-                {allRoles?.length > 1 && (
-                  <div className="text-xs flex gap-1 items-center uppercase">
-                    {item?.start_date} <BsDashLg /> {item?.end_date}
-                  </div>
-                )}
+                <h2 className="font-bold text-white text-sm">
+                  {item?.position}
+                </h2>
+                <div className="text-xs flex gap-1 items-center uppercase mt-1">
+                  {item?.start_date} <BsDashLg /> {item?.end_date}
+                </div>
                 <p className="text-sm mt-1">{item?.description}</p>
                 <div className="flex flex-wrap">
                   {pills?.length > 0
@@ -77,7 +77,7 @@ const ExperienceCard = ({ exp }: ExperienceCardProps) => {
 const Experiences = () => {
   return (
     <div className="flex flex-col gap-8" id="experience">
-      <h1 className="text-sm font-extrabold uppercase">Experience</h1>
+      <h1 className="text-xs font-extrabold uppercase">Experience</h1>
       <div className="flex flex-col gap-8">
         {experiences ? (
           experiences.map((exp) => {
@@ -91,12 +91,12 @@ const Experiences = () => {
         )}
       </div>
       <div className="text-white flex items-center gap-2 hover:underline hover:underline-offset-4">
-        <h1 className="font-bold">
+        <h1 className="font-bold text-sm">
           <Link href={resumeLink} target="_blank">
             View Full Résumé
           </Link>
         </h1>
-        <BsFillArrowUpRightSquareFill className="text-md" />
+        <BsFillArrowUpRightSquareFill className="text-xs" />
       </div>
     </div>
   );

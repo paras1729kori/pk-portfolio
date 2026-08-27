@@ -15,8 +15,8 @@ const AboutMe = () => {
 
   return (
     <div className="flex flex-col gap-8" id="whoami">
-      <h1 className="text-sm font-extrabold italic">Who is Paras?</h1>
-      <div className="flex flex-col gap-3">
+      <h1 className="text-xs font-extrabold italic">Who is Paras?</h1>
+      <div className="flex flex-col gap-3 text-sm">
         <p>
           My journey into <span className="text-white">computer science</span>{" "}
           began in high school, where I first discovered the world of web

@@ -1,7 +1,7 @@
 import { IconType } from "react-icons";
 import { IoHome } from "react-icons/io5";
-import { VscServerProcess } from "react-icons/vsc";
-import { GiSuitcase } from "react-icons/gi";
+// import { VscServerProcess } from "react-icons/vsc";
+// import { GiSuitcase } from "react-icons/gi";
 import { MdFrontHand } from "react-icons/md";
 
 export const routes: Array<{
@@ -16,18 +16,18 @@ export const routes: Array<{
     to: "/",
     icon: IoHome,
   },
-  {
-    id: 2,
-    title: "Projects",
-    to: "/projects",
-    icon: VscServerProcess,
-  },
-  {
-    id: 3,
-    title: "Work", // experience
-    to: "/work",
-    icon: GiSuitcase,
-  },
+  // {
+  //   id: 2,
+  //   title: "Projects",
+  //   to: "/projects",
+  //   icon: VscServerProcess,
+  // },
+  // {
+  //   id: 3,
+  //   title: "Work", // experience
+  //   to: "/work",
+  //   icon: GiSuitcase,
+  // },
   {
     id: 4,
     title: "About",

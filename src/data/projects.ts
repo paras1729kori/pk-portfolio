@@ -70,7 +70,7 @@ export const projects: ProjectDataType[] = [
     id: crypto.randomUUID(),
     title: "Portfolio",
     deployed_link: "https://paraskori.vercel.app/",
-    github_url: "https://github.com/paras1729kori/pk-portfolio",
+    // github_url: "https://github.com/paras1729kori/pk-portfolio",
     description:
       "My portfolio website for showcasing my skills. A sneak peek into the projects I have built and the experience I have in this evergrowing, amazing world of Computer Science.",
     tech_stack: ["Next.js", "TypeScript", "Tailwind CSS"],

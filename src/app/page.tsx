@@ -6,8 +6,14 @@ import { IoDocumentText } from "react-icons/io5";
 /** custom imports */
 import { Me } from "./components/LeftPane";
 import SidebarMenu from "./components/common/SidebarMenu";
-import { resumeLink } from "./components/RightPane/Experiences";
-import { Blogs, QuickLinks } from "./components/RightPane";
+import Experiences, { resumeLink } from "./components/RightPane/Experiences";
+import {
+  Blogs,
+  Education,
+  Projects,
+  QuickLinks,
+  TechStack,
+} from "./components/RightPane";
 
 const Home = () => {
   return (
@@ -22,13 +28,15 @@ const Home = () => {
           <div className="flex flex-col gap-24">
             {/* Me Details */}
             <div className="w-full flex flex-col gap-2">
-              <h1 className="text-white text-4xl font-extrabold lg:text-5xl">
-                Paras Kori
-              </h1>
-              <h2 className="text-white text-lg font-semibold">
+              <Link href="/">
+                <h1 className="text-white text-3xl font-extrabold lg:text-4xl">
+                  Paras Kori
+                </h1>
+              </Link>
+              <h2 className="text-white text-base font-semibold">
                 Software Engineer
               </h2>
-              <p className="w-full text-md">
+              <p className="w-full text-sm leading-normal">
                 I'm a Software Engineer with 3+ years of experience focused on
                 building fast, accessible, and thoughtfully designed web
                 experiences. I work primarily with React, TypeScript, Python and
@@ -37,7 +45,7 @@ const Home = () => {
               </p>
 
               {/* Socials */}
-              <div className="flex gap-3 text-2xl mt-2">
+              <div className="flex gap-3 text-xl mt-2">
                 <Link
                   href="https://github.com/paras1729kori"
                   className="hover:text-gray-300"
@@ -62,11 +70,14 @@ const Home = () => {
               </div>
             </div>
 
+            <Experiences />
+            <TechStack />
+            <Projects />
             <Blogs />
-            <QuickLinks />
+            <Education />
           </div>
 
-          <section className="flex flex-col gap-4">
+          <section className="flex flex-col gap-4 text-xs">
             <div className="text-sm">
               <p>
                 Written in{" "}
@@ -104,7 +115,7 @@ const Home = () => {
                 .
               </p>
             </div>
-            <p className="font-semibold text-white">
+            <p className="font-semibold text-white text-sm">
               © 2026 Paras Kori. All Rights Reserved.
             </p>
           </section>
