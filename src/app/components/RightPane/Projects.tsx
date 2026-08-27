@@ -55,7 +55,7 @@ const ProjectCard = ({ proj }: ProjectCardProps) => {
         <div className="flex flex-wrap">
           {pills
             ? pills.map((pill) => {
-                return <Pill key={proj.id} pill={pill} />;
+                return <Pill key={`${proj.id}-${pill}`} pill={pill} />;
               })
             : ""}
         </div>

@@ -61,7 +61,7 @@ const ExperienceCard = ({ exp }: ExperienceCardProps) => {
                 <div className="flex flex-wrap">
                   {pills?.length > 0
                     ? pills?.map((pill) => {
-                        return <Pill key={exp.id} pill={pill} />;
+                        return <Pill key={`${exp.id}-${pill}`} pill={pill} />;
                       })
                     : ""}
                 </div>
