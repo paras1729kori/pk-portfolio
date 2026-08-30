@@ -37,11 +37,11 @@ const Home = () => {
                 Software Engineer
               </h2>
               <p className="w-full text-sm leading-normal">
-                I'm a Software Engineer with 3+ years of experience focused on
-                building fast, accessible, and thoughtfully designed web
-                experiences. I work primarily with React, TypeScript, Python and
-                modern web technologies, with a growing focus on AI-powered
-                products and full-stack development.
+                I'm a Software Engineer from Mumbai, India with 3+ years of
+                experience focused on building fast, accessible, and
+                thoughtfully designed web experiences. I work primarily with
+                React, TypeScript, Python and modern web technologies, with a
+                growing focus on AI-powered products and full-stack development.
               </p>
 
               {/* Socials */}
