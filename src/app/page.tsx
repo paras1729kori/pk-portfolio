@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
 import { IoDocumentText } from "react-icons/io5";
+import { FaXTwitter } from "react-icons/fa6";
 
 /** custom imports */
 import { Me } from "./components/LeftPane";
@@ -59,6 +60,13 @@ const Home = () => {
                   target="_blank"
                 >
                   <IoLogoLinkedin />
+                </Link>
+                <Link
+                  href="https://x.com/paras1kori"
+                  className="hover:text-gray-300"
+                  target="_blank"
+                >
+                  <FaXTwitter />
                 </Link>
                 <Link
                   href={resumeLink}
