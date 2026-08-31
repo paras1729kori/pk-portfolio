@@ -7,6 +7,7 @@ import { FaXTwitter } from "react-icons/fa6";
 /** custom imports */
 import { Me } from "./components/LeftPane";
 import SidebarMenu from "./components/common/SidebarMenu";
+import TrackedLink from "./components/common/TrackedLink";
 import Experiences, { resumeLink } from "./components/RightPane/Experiences";
 import {
   Blogs,
@@ -47,34 +48,38 @@ const Home = () => {
 
               {/* Socials */}
               <div className="flex gap-3 text-xl mt-2">
-                <Link
+                <TrackedLink
                   href="https://github.com/paras1729kori"
                   className="hover:text-gray-300"
                   target="_blank"
+                  eventName="social_github_click"
                 >
                   <IoLogoGithub />
-                </Link>
-                <Link
+                </TrackedLink>
+                <TrackedLink
                   href="https://www.linkedin.com/in/paras1729kori/"
                   className="hover:text-gray-300"
                   target="_blank"
+                  eventName="social_linkedin_click"
                 >
                   <IoLogoLinkedin />
-                </Link>
-                <Link
+                </TrackedLink>
+                <TrackedLink
                   href="https://x.com/paras1kori"
                   className="hover:text-gray-300"
                   target="_blank"
+                  eventName="social_x_click"
                 >
                   <FaXTwitter />
-                </Link>
-                <Link
+                </TrackedLink>
+                <TrackedLink
                   href={resumeLink}
                   className="hover:text-gray-300"
                   target="_blank"
+                  eventName="resume_click"
                 >
                   <IoDocumentText />
-                </Link>
+                </TrackedLink>
               </div>
             </div>
 

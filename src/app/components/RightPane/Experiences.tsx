@@ -1,11 +1,12 @@
 /** library import */
 import { BsFillArrowUpRightSquareFill, BsDashLg, BsDot } from "react-icons/bs";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
-import Link from "next/link";
 
 /** custom import */
 import Pill from "./Pill";
+import TrackedLink from "../common/TrackedLink";
 import { ExperienceDataType } from "@/utils/allInterfaces";
+import { slugify } from "@/utils/analytics";
 import { experiences } from "@/data/experiences";
 
 interface ExperienceCardProps {
@@ -29,13 +30,14 @@ const ExperienceCard = ({ exp }: ExperienceCardProps) => {
         <div className="flex items-center gap-2 my-1">
           {exp?.cert_link ? (
             <h1 className="font-bold text-sm hover:underline hover:underline-offset-4">
-              <Link
+              <TrackedLink
                 href={exp.cert_link}
                 target="_blank"
                 className="flex items-center"
+                eventName={`experience_company_click_${slugify(exp.company_name)}`}
               >
                 {exp.company_name} <BsDot /> {exp.mode}
-              </Link>
+              </TrackedLink>
             </h1>
           ) : (
             <h1 className="flex items-center font-bold text-sm">
@@ -92,9 +94,9 @@ const Experiences = () => {
       </div>
       <div className="text-white flex items-center gap-2 hover:underline hover:underline-offset-4">
         <h1 className="font-bold text-sm">
-          <Link href={resumeLink} target="_blank">
+          <TrackedLink href={resumeLink} target="_blank" eventName="resume_click">
             View Full Résumé
-          </Link>
+          </TrackedLink>
         </h1>
         <BsFillArrowUpRightSquareFill className="text-xs" />
       </div>

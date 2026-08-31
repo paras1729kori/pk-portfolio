@@ -1,10 +1,11 @@
 /** library import */
 import { BsDashLg } from "react-icons/bs";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
-import Link from "next/link";
 
 /** custom import */
+import TrackedLink from "../common/TrackedLink";
 import { BlogDataType } from "@/utils/allInterfaces";
+import { slugify } from "@/utils/analytics";
 import { blogs } from "@/data/blogs";
 
 interface BlogCardProps {
@@ -24,13 +25,14 @@ const BlogCard = ({ blog }: BlogCardProps) => {
         <div className="text-white flex items-center gap-2">
           {blog?.link ? (
             <h1 className="font-bold hover:underline hover:underline-offset-4 text-sm">
-              <Link
+              <TrackedLink
                 href={blog.link}
                 target="_blank"
                 className="flex items-center"
+                eventName={`blog_click_${slugify(blog.title)}`}
               >
                 {blog.title}
-              </Link>
+              </TrackedLink>
             </h1>
           ) : (
             <h1 className="text-white flex items-center font-bold text-sm">
@@ -44,7 +46,7 @@ const BlogCard = ({ blog }: BlogCardProps) => {
   );
 };
 
-const Blogs = async () => {
+const Blogs = () => {
   return (
     <div className="flex flex-col gap-8" id="blogs">
       <h1 className="text-xs font-extrabold uppercase">Blogs</h1>

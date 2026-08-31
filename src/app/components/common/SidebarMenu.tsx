@@ -55,6 +55,9 @@ import Link from "next/link";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { routes } from "./utils";
 
+/** custom imports */
+import { trackEvent, slugify } from "@/utils/analytics";
+
 const SidebarMenu = () => {
   const pathname = usePathname();
   const [showSideMenu, setShowSideMenu] = useState(false);
@@ -80,7 +83,11 @@ const SidebarMenu = () => {
           const Icon = route?.icon;
 
           return (
-            <Link href={route?.to} key={route?.id}>
+            <Link
+              href={route?.to}
+              key={route?.id}
+              onClick={() => trackEvent(`nav_click_${slugify(route?.title)}`)}
+            >
               <div
                 className={`font-semibold ${pathname === route?.to ? "text-slate-200" : "text-slate-600"}`}
               >

@@ -1,12 +1,13 @@
 "use client";
 /** library import */
-import Link from "next/link";
 import { BsFillArrowUpRightSquareFill, BsLink45Deg } from "react-icons/bs";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 /** custom imports */
 import Pill from "./Pill";
+import TrackedLink from "../common/TrackedLink";
 import { ProjectDataType } from "@/utils/allInterfaces";
+import { slugify } from "@/utils/analytics";
 import { projects } from "@/data/projects";
 import { IoLogoGithub } from "react-icons/io";
 
@@ -23,22 +24,27 @@ const ProjectCard = ({ proj }: ProjectCardProps) => {
         <div className="text-white flex items-center gap-2">
           {proj?.deployed_link ? (
             <h1 className="font-bold text-sm hover:underline hover:underline-offset-4">
-              <Link
+              <TrackedLink
                 href={proj.deployed_link}
                 target="_blank"
                 className="flex items-center gap-2"
+                eventName={`project_live_click_${slugify(proj.title)}`}
               >
                 {proj.title}
                 <BsFillArrowUpRightSquareFill className="text-xs" />
-              </Link>
+              </TrackedLink>
             </h1>
           ) : (
             <h1 className="font-bold">{proj.title}</h1>
           )}
           {proj?.github_url && (
-            <Link href={proj.github_url} target="_blank">
+            <TrackedLink
+              href={proj.github_url}
+              target="_blank"
+              eventName={`project_github_click_${slugify(proj.title)}`}
+            >
               <IoLogoGithub />
-            </Link>
+            </TrackedLink>
           )}
         </div>
         <p className="text-sm mt-1">{proj.description}</p>
@@ -72,9 +78,13 @@ const Projects = () => {
       </div>
       <div className="text-white flex items-center gap-2 hover:underline hover:underline-offset-4">
         <h1 className="font-bold text-sm">
-          <Link href="https://github.com/paras1729kori" target="_blank">
+          <TrackedLink
+            href="https://github.com/paras1729kori"
+            target="_blank"
+            eventName="projects_view_all_github_click"
+          >
             View All Projects on GitHub
-          </Link>
+          </TrackedLink>
         </h1>
         <BsFillArrowUpRightSquareFill className="text-xs" />
       </div>
