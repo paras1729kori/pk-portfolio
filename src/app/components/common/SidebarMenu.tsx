@@ -49,7 +49,7 @@
 "use client";
 
 /** library imports */
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
@@ -61,9 +61,38 @@ import { trackEvent, slugify } from "@/utils/analytics";
 const SidebarMenu = () => {
   const pathname = usePathname();
   const [showSideMenu, setShowSideMenu] = useState(false);
+  const sidebarRef = useRef<HTMLElement>(null);
+
+  /** close the sidebar when the user taps anywhere outside of it */
+  useEffect(() => {
+    if (!showSideMenu) return;
+
+    const handleOutsideClick = (event: MouseEvent | TouchEvent) => {
+      if (
+        sidebarRef.current &&
+        !sidebarRef.current.contains(event.target as Node)
+      ) {
+        setShowSideMenu(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+    document.addEventListener("touchstart", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+      document.removeEventListener("touchstart", handleOutsideClick);
+    };
+  }, [showSideMenu]);
+
+  /** close the sidebar after navigating to another route */
+  useEffect(() => {
+    setShowSideMenu(false);
+  }, [pathname]);
 
   return (
     <section
+      ref={sidebarRef}
       className={`lg:hidden fixed top-1/3 right-0 flex z-20 transition ease-in-out delay-100 ${showSideMenu ? "translate-x-0" : "translate-x-[42px]"}`}
     >
       <div

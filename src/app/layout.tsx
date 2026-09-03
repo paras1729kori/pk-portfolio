@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 /** custom imports */
 import "./globals.css";
 import ClarityAnalytics from "../app/components/Clarity";
+import ViewToggle from "../app/components/ViewToggle";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={`${inter.className} bg-gray-900 text-slate-400`}>
         {process.env.NODE_ENV === "production" && <ClarityAnalytics />}
         {children}
+        <ViewToggle />
       </body>
     </html>
   );
